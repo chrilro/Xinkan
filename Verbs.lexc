@@ -1,0 +1,45 @@
+Multichar_Symbols
++V +compl +3sg +2sg +1sg +incompl +vn +an V+ +1 +2
+
+LEXICON Root
+incompl-1sg-:ɨn Verbs ;    
+incompl-3sg-:ka Verbs ;
+incompl-3sg-:mu Verbs ;
+
+LEXICON Verbs
+xuk'a V ;
+nɨm'a V ;
+uwa V ;
+tik'i V ;
+ohome V ;
+tero V ;
+hɨn'ɨ V ;
+tumu V ;
+narila V ;
+hooro V ;
+im'a V ;
+lheke' V ;
+piri  V ;
+tik'i V ; 
+
+! Suffixes:
+LEXICON V
++V: V-suff ;
+!+V: V-pref ;
+
+! Affixes:
+LEXICON V-suff
++compl+1sg:n # ;
++compl+2sg:ka' # ;
++compl+3sg:y   # ;
++an:lha   # ;
++vn:   # ;
++iv_inact:'  # ;
++iv_act:lha'  # ;
+
+!LEXICON V-pref
+!incompl+3sg:mu  # ;
+
+!I'm not sure how to do dependent affixes (the presence of a prefixe precludes a suffix) or non-catenative changes.
+!The root should change to CVC'V in the incompl (if it isn't already that)
+!or stay the same if it is. It should be CVCV in the compl. 

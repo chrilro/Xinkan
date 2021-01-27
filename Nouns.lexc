@@ -1,0 +1,37 @@
+Multichar_Symbols
++N +Sg +Pl
+
+LEXICON Root ! Define Prefixes
+1sg-:ɨn AlN ;
+2sg-:ka AlN ;
+3sg-:mu AlN ;
+        IalN ;
+
+LEXICON AlN
+huurak Num ;
+ayapa' Num ;
+miya Num ;
+peelo' Num ;
+uy Num ;
+wati Num ;
+ɬɨwɨ Num ; 
+pak'i Num ;
+
+LEXICON IalN
+ayaalha N-suff ;
+mak'u N-suff ;
+nuuru N-suff ;
+wati N-suff ;
+peelo' N-suff ;
+xuxi N-suff ;
+paama N-suff ;
+naru N-suff ;
+
+LEXICON N-suff
+-1sg:n Num ;
+-2sg:ka Num ;
+-3sg:y Num ;
+
+LEXICON Num
++Sg: # ;
++Pl:lhi # ;

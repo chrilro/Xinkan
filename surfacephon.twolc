@@ -1,0 +1,7 @@
+Alphabet
+
+{%Q%}:a ;
+
+Rules
+"Vowel Quality for i-flanking"
+%{Q%}:i 

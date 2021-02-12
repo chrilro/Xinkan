@@ -1,9 +1,9 @@
 Alphabet
 a u i e o ɨ
-p t k r ch w ɬ l ʃ s m n y f
+p t k r ch w ɬ l ʃ s m n y f h
 p' t' k' r' ch' w' l' l' ts' ts' m' n' y'
 
-%{Q%}:a
+%{Q%}
 %{F%}:i 
 
 ;
@@ -16,7 +16,7 @@ M = E O
 V = A E I O U Ɨ
     a e i o u ɨ ;
 
-P = p t k r ch w ɬ l ʃ s m n y ;
+P = p t k r ch w ɬ l ʃ s m n y h;
 
 G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ;
 
@@ -35,12 +35,17 @@ Cx:Cy <=> _ V # ;
                 Cy in G
             matched ;
 
-"Vowel Epenthesis in Glottalized CC"
-0:%{Q%} <=> C _ [:G] V ;
+! Set of vowel quality rules
+"a-Vowel Epenthesis in Glottalized CC"
+0:a <=> a [:P] _ [:G] a ;
+       
+"e-Vowel Epenthesis in Glottalized CC"
+0:e <=> e [:P] _ [:G] e ;
 
-"Vowel Quality"
-%{Q%}:i <=> i C _ C i ;
+"u-Vowel Epenthesis in Glottalized CC"
+0:u <=> u [:P] _ [:G] u ;
 
+!Consonant lenition rule
 "CC Lenition"
 Cx:h <=> _ S ;
     where Cx in P ;

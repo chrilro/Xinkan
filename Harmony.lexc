@@ -1,0 +1,42 @@
+!Practice with Xinkan suffix harmony and glottalization
+!All working not the completive deglottalization. 
+!The epenthetic vowel quality still too
+
+Multichar_Symbols
+%{F%}
+%-lh
+%.incomp
+%.comp
+%'
+ch
+ts'
+-1sg.comp
+-pl
+%-
+l'
+%{Q%}
+
+LEXICON Root
+mak'u Num ;
+seema Num ;
+pɨk'ɨ Num ;
+pene Num ;
+niw'a Asp ;
+hooro Asp ;
+uchi Asp ;
+upa Asp ;
+uwa Asp ;
+uʃa Asp ;
+ipla Asp ;
+etka Asp ;
+paɬta Asp ;
+
+LEXICON Num
+-pl:%-lh%{F%} # ;
+
+LEXICON Asp
+.incomp:0 # ;
+.comp:0 Agr ;
+
+LEXICON Agr
+-1sg.comp:-n' #;

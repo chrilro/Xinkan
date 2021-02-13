@@ -1,6 +1,5 @@
 !Practice with Xinkan suffix harmony and glottalization
 !All working not the completive deglottalization. 
-!The epenthetic vowel quality still too
 
 Multichar_Symbols
 %{F%}
@@ -33,6 +32,10 @@ paɬta Asp ;
 p'uhru Asp ;
 k'eɬke Asp ;
 hurpi Asp ;
+hawka Asp ;
+apla Asp ;
+ʃawʃa Asp ;
+ormo Asp ;
 
 LEXICON Num
 -pl:%-lh%{F%} # ;

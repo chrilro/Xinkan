@@ -1,14 +1,13 @@
 Alphabet
 a u i e o ɨ
 p t k r ch w ɬ l ʃ s m n y f h
-p' t' k' r' ch' w' l' l' ts' ts' m' n' y'
+p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ
 
-%{Q%}
 %{F%}:i 
 
 ;
 
-! Natural Classes relevenat to alternations
+! Natural Classes relevant to alternations
 Sets
 M = E O
     e o ;
@@ -18,7 +17,7 @@ V = A E I O U Ɨ
 
 P = p t k r ch w ɬ l ʃ s m n y h;
 
-G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ;
+G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ;
 
 S = p t k ;
 
@@ -38,14 +37,35 @@ Cx:Cy <=> _ V # ;
 ! Set of vowel quality rules
 "a-Vowel Epenthesis in Glottalized CC"
 0:a <=> a [:P] _ [:G] a ;
-       
+        \a [:P] _ [:G] a ;
+        a [:P] _ [:G] \a ;
+        \u [:P] _ [:G] u ;
+        \i [:P] _ [:G] i ;
+        \e [:P] _ [:G] e ;
+        \o [:P] _ [:G] o ;
+        \ɨ [:P] _ [:G] ɨ ;
+        u [:P] _ [:G] \u ;
+        i [:P] _ [:G] \i ;
+        e [:P] _ [:G] \e ;
+        o [:P] _ [:G] \o ;
+        ɨ [:P] _ [:G] \ɨ ;
+
 "e-Vowel Epenthesis in Glottalized CC"
 0:e <=> e [:P] _ [:G] e ;
 
 "u-Vowel Epenthesis in Glottalized CC"
-0:u <=> u [:P] _ [:G] u ;
+0:u <=> u [:P] _ [:G] u ;     
+
+"i-Vowel Epenthesis in Glottalized CC"
+0:i <=> i [:P] _ [:G] i ;  
+
+"o-Vowel Epenthesis in Glottalized CC"
+0:o <=> o [:P] _ [:G] o ;  
+
+"ɨ-Vowel Epenthesis in Glottalized CC"
+0:ɨ <=> ɨ [:P] _ [:G] ɨ ;  
 
 !Consonant lenition rule
 "CC Lenition"
 Cx:h <=> _ S ;
-    where Cx in P ;
+    where Cx in (p t k ch ɬ l ʃ s ) ;

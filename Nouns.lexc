@@ -1,11 +1,25 @@
+!This is mostly correct. The glottalization is happening here incorrectly. It should only happen in verbs. 
+!Once I fix the phon.twolc file it should work. 
+
 Multichar_Symbols
-+N +Sg +Pl
+1sg-
+2sg-
+3sg-
+-1sg
+-2sg
+-3sg
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+%{F%}
+-lh
+k'
+
 
 LEXICON Root ! Define Prefixes
-1sg-:ɨn AlN ;
-2sg-:ka AlN ;
-3sg-:mu AlN ;
-        IalN ;
+@U.ALIEN.YES@1sg-:@U.ALIEN.YES@ɨn- AlN ;
+@U.ALIEN.YES@2sg-:@U.ALIEN.YES@ka- AlN ;
+@U.ALIEN.YES@3sg-:@U.ALIEN.YES@mu- AlN ;
+@U.ALIEN.NO@ IalN ;
 
 LEXICON AlN
 huurak Num ;
@@ -16,22 +30,27 @@ uy Num ;
 wati Num ;
 ɬɨwɨ Num ; 
 pak'i Num ;
+seema Num ;
+pɨk'ɨ Num ;
+pene Num ;
 
 LEXICON IalN
-ayaalha N-suff ;
-mak'u N-suff ;
-nuuru N-suff ;
-wati N-suff ;
-peelo' N-suff ;
-xuxi N-suff ;
-paama N-suff ;
-naru N-suff ;
-
-LEXICON N-suff
--1sg:n Num ;
--2sg:ka Num ;
--3sg:y Num ;
+ayaalha Num ;
+mak'u Num ;
+nuuru Num;
+wati Num ;
+peelo' Num ;
+xuxi Num ;
+paama Num ;
+naru Num ;
 
 LEXICON Num
-+Sg: # ;
-+Pl:-lh%{I%} # ;
+-sg:0 Nsuff ;
+-pl:-lh%{F%} Nsuff ;
+
+LEXICON Nsuff
+@U.ALIEN.NO@-1sg:@U.ALIEN.NO@-n # ;
+@U.ALIEN.NO@-2sg:@U.ALIEN.NO@-ka # ;
+@U.ALIEN.NO@-3sg:@U.ALIEN.NO@-y # ;
+@U.ALIEN.YES@ # ;
+

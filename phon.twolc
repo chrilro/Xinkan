@@ -1,7 +1,8 @@
+!This is happening on nouns too. I need it to only happen on verbs.
 Alphabet
 a u i e o ɨ
 p t k r ch w ɬ l ʃ s m n y f h
-p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ
+p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ '
 
 %{F%}:i 
 
@@ -17,7 +18,7 @@ V = A E I O U Ɨ
 
 P = p t k r ch w ɬ l ʃ s m n y h;
 
-G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ;
+G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ';
 
 S = p t k ;
 
@@ -27,6 +28,8 @@ C = P G ;
 Rules
 "Suffix harmony"
 %{F%}:e <=> M %-lh _ ;
+            M C %-lh _ ;
+
 
 "Incompletive glottalization"
 Cx:Cy <=> _ V # ;

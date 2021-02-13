@@ -45,6 +45,7 @@ ormo Asp ;
 
 LEXICON Num
 -pl:%-lh%{F%} # ;
+-sg:0 # ;
 
 LEXICON Asp
 .incomp:0 # ;

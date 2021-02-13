@@ -1,45 +1,72 @@
+!This works like a charm. The Symbols need to be cleaned up a bit. Also once the nouns are completed
+!The vn class needs to be allowed to be alienably possessed. 
+!Derivations also
+
 Multichar_Symbols
-+V +compl +3sg +2sg +1sg +incompl +vn +an V+ +1 +2
+1sg.incomp- 2sg.incomp- 3sg.incomp- -1sg.comp -2sg.comp- -3sg.comp
+@U.COMP.NO@
+@U.COMP.YES@
+@U.NOM.NO@
+@U.NOM.YES@
+
+
+%.incomp
+%.comp
+%'
+ch
+ts'
+-1sg.comp
+-pl
+%-
+l'
+%{Q%}
 
 LEXICON Root
-incompl-1sg-:ɨn Verbs ;    
-incompl-3sg-:ka Verbs ;
-incompl-3sg-:mu Verbs ;
+@U.COMP.NO@@U.NOM.NO@1sg.incomp-:@U.COMP.NO@@U.NOM.NO@ɨn- Verbs ;    
+@U.COMP.NO@@U.NOM.NO@2sg.incomp-:@U.COMP.NO@@U.NOM.NO@ka- Verbs ;
+@U.COMP.NO@@U.NOM.NO@3sg.incomp-:@U.COMP.NO@@U.NOM.NO@mu- Verbs ;
+@U.COMP.YES@         Verbs ;
+@U.NOM.YES@.vn:@U.NOM.YES@0 Verbs ;
 
 LEXICON Verbs
-xuk'a V ;
-nɨm'a V ;
-uwa V ;
-tik'i V ;
-ohome V ;
-tero V ;
-hɨn'ɨ V ;
-tumu V ;
-narila V ;
-hooro V ;
-im'a V ;
-lheke' V ;
-piri  V ;
-tik'i V ; 
+xuk'a Asp ;
+nɨm'a Asp ;
+uwa Asp ;
+tik'i Asp ;
+ohome Asp ;
+tero Asp ;
+hɨn'ɨ Asp ;
+tumu Asp ;
+narila Asp ;
+hooro Asp ;
+im'a Asp ;
+lheke' Asp ;
+piri  Asp ;
+tik'i Asp ;
+niw'a Asp ;
+hooro Asp ;
+uchi Asp ;
+upa Asp ;
+uwa Asp ;
+uʃa Asp ;
+ipla Asp ;
+etka Asp ;
+paɬta Asp ;
+p'uhru Asp ;
+k'eɬke Asp ;
+hurpi Asp ;
+hawka Asp ;
+apla Asp ;
+ʃawʃa Asp ;
+ormo Asp ;
 
-! Suffixes:
-LEXICON V
-+V: V-suff ;
-!+V: V-pref ;
+LEXICON Asp
+@U.NOM.YES@.vn:@U.NOM.YES@0 # ;
+@U.COMP.NO@.incomp:@U.COMP.NO@0 # ;
+@U.COMP.YES@.comp:@U.COMP.YES@0 Agr ;
 
 ! Affixes:
-LEXICON V-suff
-+compl+1sg:n # ;
-+compl+2sg:ka' # ;
-+compl+3sg:y   # ;
-+an:lha   # ;
-+vn:   # ;
-+iv_inact:'  # ;
-+iv_act:lha'  # ;
-
-!LEXICON V-pref
-!incompl+3sg:mu  # ;
-
-!I'm not sure how to do dependent affixes (the presence of a prefixe precludes a suffix) or non-catenative changes.
-!The root should change to CVC'V in the incompl (if it isn't already that)
-!or stay the same if it is. It should be CVCV in the compl. 
+LEXICON Agr
+-1sg.comp:-n' # ;
+-2sg.comp:-ka' # ;
+-3sg.comp:-y'   # ;

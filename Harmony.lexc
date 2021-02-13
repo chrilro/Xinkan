@@ -16,10 +16,16 @@ l'
 %{Q%}
 
 LEXICON Root
+    Nouns ;
+    Verbs ;
+
+LEXICON Nouns
 mak'u Num ;
 seema Num ;
 pɨk'ɨ Num ;
 pene Num ;
+
+LEXICON Verbs
 niw'a Asp ;
 hooro Asp ;
 uchi Asp ;

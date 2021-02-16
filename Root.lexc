@@ -1,0 +1,38 @@
+Multichar_Symbols
+!Symbols for nouns
+1sg.poss- 2sg.poss- 3sg.poss- -1sg.poss -2sg.poss -3sg.poss
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+%{F%}
+-lh
+-pl
+.sg
+
+!Symbols for verbs
+1sg.incomp- 2sg.incomp- 3sg.incomp- -1sg.comp -2sg.comp- -3sg.comp
+@U.COMP.NO@
+@U.COMP.YES@
+@U.NOM.NO@
+@U.NOM.YES@
+%.incomp
+%.comp
+%'
+
+!Orthographic symbols
+ch
+ch'
+ts'
+l'
+k'
+p'
+t'
+w'
+r'
+n'
+m'
+y'
+
+LEXICON Root
+    Nouns ;
+    Verbs ;
+

@@ -24,13 +24,7 @@ S = p t k ;
 
 C = P G ; 
 
-
 Rules
-"Suffix harmony"
-%{F%}:e <=> M %-lh _ ;
-            M C %-lh _ ;
-
-
 "Incompletive glottalization"
 Cx:Cy <=> _ V # ;
             where Cx in P

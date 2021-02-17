@@ -1,17 +1,97 @@
 !For now to keep the glottalization from overgenerating, this has to be composed with the Nphon.twolc file
-!separately from the Vphon.twolce and Verbs.lexc files. 
+!separately from the Vphon.twolce and Verbs.lexc files. Once I combine this with the verbs I the prefixes are the same 
+!as they have, I'll find a way to combine them. 
+!I'm getting an error about chu' on the twolc
 
+Multichar_Symbols
+dim-
+chu-
+
+ɨn-
+ka'-
+mu-
+muk-
+ka(ay)-
+mu(ay)-
+-n'
+-ka'
+-y
+-k
+-h
+-ka% ay
+-h% lhik
+
+1sg.poss-
+2sg.poss-
+3sg.poss-
+1pl.poss-
+2pl.poss-
+3pl.poss-
+-1sg.poss
+-2sg.poss
+-3sg.poss
+-1pl.poss
+-2pl.poss
+-3pl.poss
+
+.sg
+-pl
+-lh
+%{F%}
+
+% 
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+@U.VAR.YES@
+@U.VAR.NO@
+
+LEXICON Root
+        Nouns ;
 
 LEXICON Nouns
-        NPrefixes ;
+        Diminutive ;
+@U.ALIEN.NO@  IalNclass ;
+@U.ALIEN.YES@@U.VAR.NO@ AlNclass ;
+@U.ALIEN.YES@@U.VAR.NO@ NPrefixes ;
+@U.VAR.YES@ VarNclass ;
+
+LEXICON Diminutive 
+@U.ALIEN.YES@@U.VAR.NO@dim-:@U.ALIEN.YES@@U.VAR.NO@chu- NPrefixes ;
+@U.ALIEN.NO@dim-:@U.ALIEN.NO@chu- IalNclass ;
+@U.ALIEN.YES@@U.VAR.NO@dim-:@U.ALIEN.YES@@U.VAR.NO@chu- AlNclass ;
+@U.VAR.YES@dim-:@U.VAR.YES@chu- VarNclass ;
 
 LEXICON NPrefixes
-@U.ALIEN.YES@1sg.poss-:@U.ALIEN.YES@ɨn- AlN ;
-@U.ALIEN.YES@2sg.poss-:@U.ALIEN.YES@ka- AlN ;
-@U.ALIEN.YES@3sg.poss-:@U.ALIEN.YES@mu- AlN ;
-@U.ALIEN.NO@ IalN ;
+1sg.poss-:ɨn- AlNclass ;
+2sg.poss-:ka'- AlNclass ;
+3sg.poss-:mu- AlNclass ;
+1pl.poss-:muk- AlNclass ;
+2pl.poss-:ka(ay)- AlNclass ;
+3pl.poss-:mu(ay)- AlNclass ;
 
-LEXICON AlN
+LEXICON IalNclass 
+        IalN ;
+        ProperNouns ;
+
+LEXICON IalN
+nuuru Num;
+wati Num ;
+peelo' Num ;
+xuxi Num ;
+paama Num ;
+naru Num ;
+
+LEXICON ProperNouns
+hwan # ;
+tuuru' # ;
+ts'ɨɨmalh # ;
+
+LEXICON AlNclass
+@U.VAR.NO@ Countnouns ;
+@U.VAR.NO@ Massnouns ;
+@U.VAR.YES@ VarN ;
+
+LEXICON Countnouns
 huurak Num ;
 ayapa' Num ;
 miya Num ;
@@ -24,23 +104,33 @@ seema Num ;
 pɨk'ɨ Num ;
 pene Num ;
 
-LEXICON IalN
-ayaalha Num ;
+LEXICON Massnouns
+uy # ;
+wati # ;
+nuuru # ;
+lhɨwɨ # ; 
+
+LEXICON VarNclass
+@U.ALIEN.YES@ NPrefixes ;
+@U.ALIEN.NO@ VarN ;
+
+LEXICON VarN
+mɨn'a Num ;
+wirik'i Num ;
 mak'u Num ;
-nuuru Num;
-wati Num ;
-peelo' Num ;
-xuxi Num ;
-paama Num ;
-naru Num ;
+ayaalha Num ;
 
 LEXICON Num
 .sg:0 Nsuff ;
 -pl:-lh%{F%} Nsuff ;
 
 LEXICON Nsuff
-@U.ALIEN.NO@-1sg.poss:@U.ALIEN.NO@-n # ;
-@U.ALIEN.NO@-2sg.poss:@U.ALIEN.NO@-ka # ;
-@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-y # ;
+@U.ALIEN.NO@-1sg.poss:@U.ALIEN.NO@-n' # ;
+@U.ALIEN.NO@-2sg.poss:@U.ALIEN.NO@-ka' # ;
+@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-h # ;
+@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-k # ;
+@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-ka% ay # ;
+@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-h% lhik # ;
 @U.ALIEN.YES@ # ;
+@U.ALIEN.NO@ # ;
 

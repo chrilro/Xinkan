@@ -50,7 +50,7 @@ LEXICON Root
 
 LEXICON Nouns
         Diminutive ;
-@U.ALIEN.NO@  IalNclass ;
+@U.ALIEN.NO@ IalNclass ;
 @U.ALIEN.YES@@U.VAR.NO@ AlNclass ;
 @U.ALIEN.YES@@U.VAR.NO@ NPrefixes ;
 @U.VAR.YES@ VarNclass ;
@@ -121,16 +121,16 @@ mak'u Num ;
 ayaalha Num ;
 
 LEXICON Num
-.sg:0 Nsuff ;
--pl:-lh%{F%} Nsuff ;
+.sg:0 SetE ;
+-pl:-lh%{F%} SetE ;
 
-LEXICON Nsuff
+LEXICON SetE
 @U.ALIEN.NO@-1sg.poss:@U.ALIEN.NO@-n' # ;
 @U.ALIEN.NO@-2sg.poss:@U.ALIEN.NO@-ka' # ;
 @U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-h # ;
-@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-k # ;
-@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-ka% ay # ;
-@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-h% lhik # ;
+@U.ALIEN.NO@-1pl.poss:@U.ALIEN.NO@-k # ;
+@U.ALIEN.NO@-2pl.poss:@U.ALIEN.NO@-ka% ay # ;
+@U.ALIEN.NO@-3pl.poss:@U.ALIEN.NO@-h% lhik # ;
 @U.ALIEN.YES@ # ;
 @U.ALIEN.NO@ # ;
 

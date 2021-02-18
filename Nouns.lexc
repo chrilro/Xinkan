@@ -2,34 +2,6 @@
 !separately from the Vphon.twolce and Verbs.lexc files. Once I combine this with the verbs I the prefixes are the same 
 !as they have, I'll find a way to combine them. 
 !I'm getting an error about chu' on the twolc
-
-Multichar_Symbols
-dim-
-chu-
-
-ɨn-
-ka'-
-mu-
-muk-
-ka(ay)-
-mu(ay)-
--n'
--ka'
--y
--k
--h
--ka% ay
--h% lhik
-
-1sg.poss-
-2sg.poss-
-3sg.poss-
-1pl.poss-
-2pl.poss-
-3pl.poss-
--1sg.poss
--2sg.poss
--3sg.poss
 -1pl.poss
 -2pl.poss
 -3pl.poss

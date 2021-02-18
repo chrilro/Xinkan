@@ -35,4 +35,7 @@ y'
 LEXICON Root
     Nouns ;
     Verbs ;
+    AdposPossclass ;
+    AdjPossclass ;
+
 

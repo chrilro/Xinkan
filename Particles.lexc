@@ -1,0 +1,22 @@
+!File of all the uninflectable words
+
+Multichar_Symbols
+
+LEXICON Root
+    ParticleClass ;
+
+LEXICON ParticleClass
+    Nominalparticles ;
+    Verbalparticles ;
+
+LEXICON Nominalparticles
+kumu # ;
+ki' # ;
+
+LEXICON Verbalparticles
+pe' # ;
+wa # ;
+wan # ;
+i # ;
+pero # ;
+o #;   

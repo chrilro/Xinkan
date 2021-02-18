@@ -1,0 +1,43 @@
+Multichar_Symbols
+@U.ALIEN.NO@
+@U.ALIEN.YES@
+-1sg.poss
+-2sg.poss
+-3sg.poss
+-1pl.poss
+-2pl.poss
+-3pl.poss
+-n'
+-ka'
+-y
+-k
+-h
+-ka% ay
+-h% lhik
+
+LEXICON Root
+    AdposPossclass ;
+
+LEXICON AdposPossclass 
+@U.ALIEN.NO@ Adpositions ;
+
+LEXICON Adpositions
+alh SetE ;
+ʃa SetE ;
+neelha SetE ;
+hiná SetE ;
+ʃam'a SetE ;
+par'a SetE ;
+ɨɨlɨ SetE ;
+huuʃi SetE ;
+ti'i SetE ;
+
+LEXICON SetE
+@U.ALIEN.NO@-1sg.poss:@U.ALIEN.NO@-n' # ;
+@U.ALIEN.NO@-2sg.poss:@U.ALIEN.NO@-ka' # ;
+@U.ALIEN.NO@-3sg.poss:@U.ALIEN.NO@-h # ;
+@U.ALIEN.NO@-1pl.poss:@U.ALIEN.NO@-k # ;
+@U.ALIEN.NO@-2pl.poss:@U.ALIEN.NO@-ka% ay # ;
+@U.ALIEN.NO@-3pl.poss:@U.ALIEN.NO@-h% lhik # ;
+@U.ALIEN.YES@ # ;
+@U.ALIEN.NO@ # ;

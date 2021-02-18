@@ -1,0 +1,29 @@
+Multichar_Symbols
+% 
+
+LEXICON Root
+    Pronominals ;
+
+LEXICON Pronominals
+    QuestionWords ;
+    Pronouns ;
+    Demonstratives ;
+
+LEXICON QuestionWords
+ka(a)ta # ;
+weena # ;
+handa' # ;
+han # ;
+han% alhi # ;
+lhɨkɨ # ;
+iwalh # ;
+
+LEXICON Pronouns
+nɨn # ;
+naká # ;
+nah # ;
+neelhek # ;
+
+LEXICON Demonstratives
+man # ;
+nan'ah # ;

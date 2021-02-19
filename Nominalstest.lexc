@@ -1,0 +1,144 @@
+! Nominals test
+Multichar_Symbols
+@U.ALIEN.NO@
+@U.ALIEN.YES@
+@U.ADJ.YES@
+@U.ADJ.NO@
+@U.VAR.YES@ 
+@U.VAR.NO@ 
+@U.NOM.YES@
+@U.Pref.YES@
+
+!Symbols for nouns, adjectives and adpositions
+LEXICON Root
+    AdjPossclass ; !Build Adjectives
+    Nouns ; !Build Nouns
+    ! Verbs ; ! Build Verbs
+
+LEXICON AdjPossclass 
+@U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; !Mark Adjectives as inalienable and as adjectives
+
+LEXICON Adjectives
+ts'ama SetE ;
+
+LEXICON SetE !Possession for the inalienable nouns and some adjective functions
+@U.ALIEN.NO@@U.ADJ.NO@-3sg.poss:@U.ALIEN.NO@@U.ADJ.NO@-h # ; ! Only allow inalienable non adjectives
+@U.ALIEN.NO@@U.ADJ.YES@-3sg.poss:@U.ALIEN.NO@@U.ADJ.YES@-h # ; ! Only allow inalienable adjectives (This is the only suffix they allow).
+# ; ! Allow all to be bare stems
+
+LEXICON Nouns
+! ! @U.ADJ.NO@  Diminutive ;
+@U.ADJ.NO@    IalNclass ; !Build Inalienable Nouns never have prefixes only suffixes
+@U.ALIEN.YES@ AlNclass ; ! Build alienable Nouns optionally have prefixes never suffixes
+@U.ADJ.NO@    VarNclass ; ! Build Varaiable Nouns variably have prefixes or suffixes
+               SetB ; ! Prefixes
+
+! ! LEXICON Diminutive 
+! ! @U.ALIEN.YES@@U.VAR.NO@dim-:@U.ALIEN.YES@@U.VAR.NO@chu- SetB ;
+! ! @U.ALIEN.NO@dim-:@U.ALIEN.NO@chu- IalNclass ;
+! ! @U.ALIEN.YES@@U.VAR.NO@dim-:@U.ALIEN.YES@@U.VAR.NO@chu- AlNclass ;
+! ! @U.VAR.YES@dim-:@U.VAR.YES@chu- VarNclass ;
+
+ LEXICON SetB !possession for the alienable nouns, verbal nouns and tv incompletive
+ 1sg:ɨn- SetBFunction ;
+! ! ! @U.Pref.NO@ TVroots ;
+
+ LEXICON SetBFunction
+! ! !  @U.NOM.NO@.incomp-:@U.NOM.NO@0 TVroots ;
+! ! ! ! @U.NOM.YES@.poss-:@U.NOM.YES@0 TVroots ;
+! ! ! ! @U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ;
+.poss-:0 AlNclass ; ! Add possessive function of prefix to alienable nouns
+
+LEXICON IalNclass 
+         IalN ;
+         ProperNouns ;
+
+LEXICON IalN
+nuuru Num;
+
+LEXICON ProperNouns
+hwan # ;
+
+LEXICON AlNclass
+@U.ALIEN.YES@  Countnouns ;
+@U.ALIEN.YES@  Massnouns ;
+
+LEXICON Countnouns
+huurak Num ;
+
+LEXICON Massnouns
+ uy # ;
+
+LEXICON VarNclass
+@U.ALIEN.YES@ SetB ;
+@U.ALIEN.NO@ VarN ;
+
+LEXICON VarN
+mɨn'a Num ;
+
+LEXICON Num
+.sg:0 SetE ;
+-pl:-lh%{F%} SetE ;
+
+
+
+
+! ! LEXICON Verbs
+! ! @U.TV.YES@  Transitive ;
+! ! @U.TV.NO@   Intransitive ;
+
+! ! LEXICON Transitive 
+! ! @U.COMP.NO@@U.NOM.NO@ SetB ; !Incompletive forms
+! ! @U.COMP.NO@@U.NOM.YES@ SetB ; !Verbal Nouns
+! ! @U.COMP.YES@@U.NOM.NO@ TVroots ; !Completive forms
+
+! ! LEXICON Intransitive
+! ! @U.NOM.NO@ IVPrefixes ; !Complete and incompletive forms
+! ! @U.NOM.YES@ IVclass ; ! Verbal nouns
+
+! ! LEXICON SetB ! possession for the verbal nouns and tv incompletive
+! ! @U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+! ! @U.Pref.NO@ TVroots ;
+
+! LEXICON SetBFunction
+! @U.NOM.NO@.incomp-:@U.NOM.NO@0 TVroots ;
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 TVroots ;
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; 
+
+! LEXICON IVPrefixes 
+! @U.COMP.YES@ SetC ;
+! @U.COMP.NO@ SetD ;
+
+! LEXICON SetC !IV completive aspect
+! 1sg.comp-:ɨn- IVclass ;
+
+! LEXICON SetD !IV incompletive aspect
+! 1sg.incomp-:ɨn- IVclass ;
+
+! LEXICON TVroots
+! xuka Asp ;
+
+! LEXICON IVclass 
+! @U.NOM.NO@@U.ActIV.YES@ ActIVroots ;
+! @U.NOM.NO@@U.ActIV.NO@ AffIVroots ;
+! @U.NOM.YES@@U.ActIV.YES@ ActIVroots ;
+! @U.NOM.YES@@U.ActIV.NO@ AffIVroots ;
+
+! LEXICON ActIVroots
+! mɨka Asp ;
+
+! LEXICON AffIVroots
+! uuka Asp ;
+
+! LEXICON Asp
+! @U.NOM.NO@@U.TV.NO@.comp:@U.NOM.NO@@U.TV.NO@0 IVclassmarker ;
+! @U.COMP.NO@@U.NOM.NO@@U.Pref.YES@.incomp:@U.COMP.NO@@U.NOM.NO@@U.Pref.YES@0 # ;
+! @U.COMP.NO@@U.NOM.YES@.vn:@U.COMP.NO@@U.NOM.YES@0 # ;
+! @U.COMP.YES@@U.TV.YES@.comp:@U.COMP.YES@@U.TV.YES@0 SetA ;
+
+! LEXICON IVclassmarker ! only used in completive aspect
+! @U.COMP.YES@@U.ActIV.YES@.activ:@U.COMP.YES@@U.ActIV.YES@-lha' # ;
+! @U.COMP.YES@@U.ActIV.NO@.affiv:@U.COMP.YES@@U.ActIV.NO@-' # ;
+
+! LEXICON SetA
+! -1sg.comp:-n' # ;

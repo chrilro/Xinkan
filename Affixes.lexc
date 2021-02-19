@@ -1,0 +1,44 @@
+
+LEXICON SetA !completive transitive verbs
+-1sg.comp:-n' # ;
+-2sg.comp:-ka' # ;
+-3sg.comp:-y' # ;
+-1pl.comp:-k # ;
+-2pl.comp:-ka'% ay # ;
+-3pl.comp:-y'% ay% %(lhik%) # ;
+
+LEXICON SetB ! possession for the alienable, verbal nouns and tv incompletive
+@U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+@U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
+@U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
+@U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
+@U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
+@U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+@U.Pref.NO@ TVroots ;
+
+LEXICON SetC !IV completive aspect
+1sg.comp-:ɨn- IVclass ;
+2sg.comp-:ka- IVclass ;
+3sg.comp-:%0- IVclass ;
+1pl.comp-:muk- IVclass ;
+2pl.comp-:ka(ay) IVclass ;
+3pl.comp-:%0(ay)- IVclass ;
+
+LEXICON SetD !IV incompletive aspect
+1sg.incomp-:ɨn- IVclass ;
+2sg.incomp-:ka- IVclass ;
+3sg.incomp-:a- IVclass ;
+1pl.incomp-:muk- IVclass ;
+2pl.incomp-:ka(ay) IVclass ;
+3pl.incomp-:a(ay)- IVclass ;
+
+LEXICON SetE !Possession for the inalienable nouns
+@U.ADJ.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-n' # ;
+@U.ADJ.NO@@U.ALIEN.NO@-2sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-ka' # ;
+@U.ADJ.NO@@U.ALIEN.NO@-3sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-h # ;
+@U.ADJ.YES@@U.ALIEN.NO@-3sg.poss:@U.ADJ.YES@@U.ALIEN.NO@-h # ;
+@U.ADJ.NO@@U.ALIEN.NO@-1pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-k # ;
+@U.ADJ.NO@@U.ALIEN.NO@-2pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-ka% ay # ;
+@U.ADJ.NO@@U.ALIEN.NO@-3pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-h% lhik # ;
+@U.ALIEN.YES@ # ;
+@U.ADJ.YES@@U.ALIEN.NO@ # ;

@@ -52,12 +52,12 @@ LEXICON INALIEN
 xuxi SetE ;
 
 LEXICON SetB
-@U.SETB.YES@1sg:@U.SETB.YES@ɨn- SetBfunction ;
+@U.SETB.YES@1sg-:@U.SETB.YES@ɨn- SetBfunction ;
 
 LEXICON SetBfunction
 @U.NOM.YES@.poss-:@U.NOM.YES@0 ALIEN ; !@U.NOM.YES@ is to get only nouns with poss function
 @U.NOM.YES@@U.PREFIX.YES@.poss-:@U.NOM.YES@@U.PREFIX.YES@0 VARIABLE ; ! @U.PREFIX.YES@ is used to block suffixes and prefixes on variables
-@U.NOM.NO@.subj-:@U.NOM.NO@0 TVstems ; !@U.NOM.NO@ is to get only verbs with subj function
+@U.NOM.NO@.subj.incomp-:@U.NOM.NO@0 TVstems ; !@U.NOM.NO@ is to get only verbs with subj function
 
 LEXICON ALIEN
     COUNT ;
@@ -78,7 +78,7 @@ LEXICON NUM
 
 LEXICON Verbs ! @U.IV.YES@ to get the right aspect marking
 @U.IV.NO@    TRANSITIVE ;
-@U.IV.YES@    INTRANSITIVE ;
+@U.IV.YES@   INTRANSITIVE ;
 
 LEXICON TRANSITIVE !Prefixes are optional @U.NOM.NO@ for differnt verb stem functions
 @U.NOM.NO@ SetB ;
@@ -94,7 +94,7 @@ LEXICON ASPECT !This create subj agreement for incompletives optional which I th
 @U.VN.NO@@U.COMP.YES@@U.IV.YES@.comp:@U.VN.NO@@U.COMP.YES@@U.IV.YES@0 IVCLASSMARKER ;
 
 LEXICON SetA ! This make subj agreement optional which I think it is
--1sg:-n' # ;
+-1sg.comp:-n' # ;
 - # ;
 
 LEXICON INTRANSITIVE !Optional prefixes @U.COMP.YES@ to get the correct aspects

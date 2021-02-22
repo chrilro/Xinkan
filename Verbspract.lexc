@@ -1,0 +1,26 @@
+Multichar_Symbols
+.comp
+.incomp
+-1sg.comp
+.vn
+%{IN%}
+p' t' k' r' ch' w' l' l' ts' ts' m' n' y'
+
+LEXICON Root
+    TVstems ;
+    Nouns ;
+ 
+LEXICON TVstems
+xuka ASP ;
+
+LEXICON ASP
+.comp: OBJ ;
+.incomp:%{IN%} # ;
+.vn:%{IN%} # ;
+
+LEXICON OBJ
+-1sg.comp:-n' #;
+#;
+
+LEXICON Nouns
+sama #;

@@ -1,0 +1,28 @@
+
+Alphabet
+a u i e o ɨ
+p t k r ch w ɬ l ʃ s m n y f h
+p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ '
+
+%{IN%}
+
+;
+! Natural Classes relevant to alternations
+Sets
+
+V = A E I O U Ɨ
+    a e i o u ɨ ;
+
+P = p t k r ch w ɬ l ʃ s m n y h;
+
+G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ';
+
+Rules
+"Incompletive glottalization"
+Cx:Cy <=>  _ V %{IN%} ;
+            where Cx in P
+                Cy in G
+            matched ;
+
+! "Tag removal"
+! %{IN%}:0 <=> :G V _ # ;

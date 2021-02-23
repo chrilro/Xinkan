@@ -1,28 +1,60 @@
 
 Alphabet
 a u i e o ɨ
-p t k r ch w ɬ l ʃ s m n y f h
-p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ʔ '
+p t k r ch w ɬ l ʃ s m n y h
+p' t' k' r' ch' w' l' ts' m' n' y' ʔ '
 
-%{IN%}
+%{NC%}
 
 ;
 ! Natural Classes relevant to alternations
 Sets
 
-V = A E I O U Ɨ
-    a e i o u ɨ ;
+V = a e i o u ɨ ; ! All vowels
 
-P = p t k r ch w ɬ l ʃ s m n y h;
+P = p t k r ch w ɬ l ʃ s m n y h; ! Plain consonants
 
-G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' ';
+G = p' t' k' r' ch' w' l' l' ts' ts' m' n' y' '; ! Glottalized consonants
+
+
 
 Rules
 "Incompletive glottalization"
-Cx:Cy <=>  _ V %{IN%} ;
+Cx:Cy <=> _ V %{NC%}: ;  ! this last colon was necessary to make the deletion work. 
             where Cx in P
                 Cy in G
             matched ;
+! This rule says change P into G before a vowel and the NC tag on the lexical side. 
+! The P:G correspondence is restricted to _ V {NC}
+! The : makes sure this is {NC} in the lexical side (it can correspond to anything on the lower side). 
+! Because of the deletion rule we have two correspondences {NC}:{NC} and {NC}:0. Both should cause glottalization. 
+! If it is {NC} without the colon only the first would work. The second would be ignored for this rule
+! In this case the whole form deletes. WHY? It seems to be because on the forms fails and so the whole form is deleted. 
+! This results in xuka{NC:NC} and xuka{NC:0} (as well as xuk'a{NC:NC} and xuk'a{NC:0}) both of which fail. NC:NC is not permitted after P: V _. NC:0 is not permitted after P: V _
+! So the P forms are no allowed (they fail) - I guess that means removed. 
+! If these are removed there is nothing left to glottalize or delete - they failed. 
+! It seems that you could use this your advantage. Delete forms that fail.
 
-! "Tag removal"
-! %{IN%}:0 <=> :G V _ # ;
+!This works but deglottalization will fail since l' and ts' are mapped to two different P consonants. 
+
+
+ "Tag removal"
+ %{NC%}:0 <=> :G V _ # ;
+
+ ! This rule says delete NC after a lower side G followed by a vowel and a word boundary. 
+ ! The {NC}:0 correspondence is only possible after :G V _ 
+
+"a-Vowel Epenthesis in Glottalized CC"
+0:a <=> a [:P] _ [:G] a ;
+        \a [:P] _ [:G] a ;
+        a [:P] _ [:G] \a ;
+        \u [:P] _ [:G] u ;
+        \i [:P] _ [:G] i ;
+        \e [:P] _ [:G] e ;
+        \o [:P] _ [:G] o ;
+        \ɨ [:P] _ [:G] ɨ ;
+        u [:P] _ [:G] \u ;
+        i [:P] _ [:G] \i ;
+        e [:P] _ [:G] \e ;
+        o [:P] _ [:G] \o ;
+        ɨ [:P] _ [:G] \ɨ ;

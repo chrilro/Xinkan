@@ -3,20 +3,23 @@ Multichar_Symbols
 .incomp
 -1sg.comp
 .vn
-%{IN%}
+%{NC%}
 p' t' k' r' ch' w' l' l' ts' ts' m' n' y'
+@U.COMP.YES@
+@U.COMP.NO@
 
 LEXICON Root
     TVstems ;
     Nouns ;
- 
+
 LEXICON TVstems
 xuka ASP ;
+ʃawʃa ASP ;
 
 LEXICON ASP
 .comp: OBJ ;
-.incomp:%{IN%} # ;
-.vn:%{IN%} # ;
+.incomp:%{NC%} # ;
+.vn:%{NC%} # ;
 
 LEXICON OBJ
 -1sg.comp:-n' #;

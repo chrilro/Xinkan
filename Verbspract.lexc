@@ -4,7 +4,7 @@ Multichar_Symbols
 -1sg.comp
 .vn
 %{NC%}
-p' t' k' r' ch' w' l' l' ts' ts' m' n' y'
+p' t' k' r' ch' w' ɬ' l' ts' ts' m' n' y'
 @U.COMP.YES@
 @U.COMP.NO@
 
@@ -13,8 +13,10 @@ LEXICON Root
     Nouns ;
 
 LEXICON TVstems
-xuka ASP ;
-ʃawʃa ASP ;
+xuka ASP "eat" ;
+pula ASP "do" ;
+ʃawʃa ASP "sow" ;
+etka ASP "pull" ;
 
 LEXICON ASP
 .comp: OBJ ;
@@ -26,4 +28,4 @@ LEXICON OBJ
 #;
 
 LEXICON Nouns
-sama #;
+ts'ama # "rat" ;

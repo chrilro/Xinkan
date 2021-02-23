@@ -6,6 +6,7 @@ p' t' k' r' ch' w' l' ts' m' n' y' ʔ '
 
 %{NC%}
 
+
 ;
 ! Natural Classes relevant to alternations
 Sets
@@ -44,17 +45,6 @@ Cx:Cy <=> _ V %{NC%}: ;  ! this last colon was necessary to make the deletion wo
  ! This rule says delete NC after a lower side G followed by a vowel and a word boundary. 
  ! The {NC}:0 correspondence is only possible after :G V _ 
 
-"a-Vowel Epenthesis in Glottalized CC"
-0:a <=> a [:P] _ [:G] a ;
-        \a [:P] _ [:G] a ;
-        a [:P] _ [:G] \a ;
-        \u [:P] _ [:G] u ;
-        \i [:P] _ [:G] i ;
-        \e [:P] _ [:G] e ;
-        \o [:P] _ [:G] o ;
-        \ɨ [:P] _ [:G] ɨ ;
-        u [:P] _ [:G] \u ;
-        i [:P] _ [:G] \i ;
-        e [:P] _ [:G] \e ;
-        o [:P] _ [:G] \o ;
-        ɨ [:P] _ [:G] \ɨ ;
+
+! Not sure how to get the consonants to deglottalize. I need to check the environment.
+

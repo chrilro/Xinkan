@@ -69,16 +69,10 @@ Cx:h <=> _ S ;
 
 !First syllable nucleas geminates in the affective iv completive form. This rule is correct. Seems a bit verbose. 
 "Lengthening"
- Vx:Vy <=> AFF%+: _ C V ;
-!         where Vx in (a e i o u ɨ) 
-!         Vy in (aa ee ii oo uu ɨɨ)
-!         matched;
- 
-!"Lengthening"
-! Vx:Vy <=> # (C) _ C V %{AFF%}: ;
-!         where Vx in (a e i o u ɨ) 
-!         Vy in (aa ee ii oo uu ɨɨ)
-!         matched;
+Vx:Vy <=> # (C) _ C V %{AFF%}: ;
+        where Vx in (a e i o u ɨ) 
+        Vy in (aa ee ii oo uu ɨɨ)
+        matched;
 
  "Affective Tag removal"
  %{AFF%}:0 <=> V _  ;
@@ -88,8 +82,7 @@ Cx:h <=> _ S ;
  ! This rule says delete NC after a lower side G followed by a vowel and a word boundary. 
  ! The {NC}:0 correspondence is only possible after :G V _
 
- Rules
-"Plural Suffix harmony"
+ "Plural Suffix harmony"
 %{F%}:e <=> M %-lh _ ;
             M C %-lh _ ;
 

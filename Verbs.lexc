@@ -30,6 +30,7 @@ Multichar_Symbols
 -y'% ay
 % %(lhik%)
 % 
+%{NC%}
 
 !Symbols for VNs
 .poss
@@ -83,21 +84,21 @@ LEXICON Verbs
 @U.TV.NO@   Intransitive ;
 
 LEXICON Transitive 
-@U.COMP.NO@@U.NOM.NO@ SetB ; !Incompletive forms
-@U.COMP.NO@@U.NOM.YES@ SetB ; !Verbal Nouns
-@U.COMP.YES@@U.NOM.NO@ TVroots ; !Completive forms
+@U.COMP.NO@@U.NOM.NO@ SetB ; !Incompletive forms with agreement
+@U.COMP.NO@@U.NOM.YES@ SetB ; !Possessed Verbal Nouns
+@U.COMP.YES@@U.NOM.NO@ TVroots ; !Completive forms with agreement and Incompletive bare
 
 LEXICON Intransitive
-@U.NOM.NO@ IVPrefixes ; !Complete and incompletive forms
-@U.NOM.YES@ IVclass ; ! Verbal nouns
+IVPrefixes ; !Complete and incompletive forms
+IVclass ; ! bare verbs
 
 LEXICON SetB ! possession for the verbal nouns and tv incompletive
-@U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
-@U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
+! @U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+! @U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
 @U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
-@U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
-@U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
-@U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+! @U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
+! @U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
+! @U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
 @U.Pref.NO@ TVroots ;
 
 LEXICON SetBFunction
@@ -110,20 +111,20 @@ LEXICON IVPrefixes
 @U.COMP.NO@ IVINCOMPPREF ;
 
 LEXICON IVCOMPPREF !IV completive aspect
-1sg.comp-:ɨn- IVclass ;
-2sg.comp-:ka- IVclass ;
+! 1sg.comp-:ɨn- IVclass ;
+! 2sg.comp-:ka- IVclass ;
 3sg.comp-:%0- IVclass ;
-1pl.comp-:muk- IVclass ;
-2pl.comp-:ka(ay) IVclass ;
-3pl.comp-:%0(ay)- IVclass ;
+! 1pl.comp-:muk- IVclass ;
+! 2pl.comp-:ka(ay) IVclass ;
+! 3pl.comp-:%0(ay)- IVclass ;
 
 LEXICON IVINCOMPPREF !IV incompletive aspect
-1sg.incomp-:ɨn- IVclass ;
-2sg.incomp-:ka- IVclass ;
+! 1sg.incomp-:ɨn- IVclass ;
+! 2sg.incomp-:ka- IVclass ;
 3sg.incomp-:a- IVclass ;
-1pl.incomp-:muk- IVclass ;
-2pl.incomp-:ka(ay) IVclass ;
-3pl.incomp-:a(ay)- IVclass ;
+! 1pl.incomp-:muk- IVclass ;
+! 2pl.incomp-:ka(ay) IVclass ;
+! 3pl.incomp-:a(ay)- IVclass ;
 
 LEXICON TVroots
 xuka Asp ;
@@ -167,12 +168,13 @@ LEXICON ActIVroots
 mɨka Asp ;
 
 LEXICON AffIVroots
-uuka Asp ;
+uka Asp ;
 
 LEXICON Asp
 @U.NOM.NO@@U.TV.NO@.comp:@U.NOM.NO@@U.TV.NO@0 IVclassmarker ;
-@U.COMP.NO@@U.NOM.NO@@U.Pref.YES@.incomp:@U.COMP.NO@@U.NOM.NO@@U.Pref.YES@0 # ;
-@U.COMP.NO@@U.NOM.YES@.vn:@U.COMP.NO@@U.NOM.YES@0 # ;
+@U.COMP.NO@@U.NOM.NO@@U.Pref.YES@.incomp:@U.COMP.NO@@U.NOM.NO@@U.Pref.YES@%{NC%} # ;
+@U.COMP.NO@@U.NOM.NO@@U.Pref.NO@.incomp:@U.COMP.NO@@U.NOM.NO@@U.Pref.NO@%{NC%} # ;
+@U.COMP.NO@@U.NOM.YES@.vn:@U.COMP.NO@@U.NOM.YES@%{NC%} # ;
 @U.COMP.YES@@U.TV.YES@.comp:@U.COMP.YES@@U.TV.YES@0 ObjAgr ;
 
 LEXICON IVclassmarker ! only used in completive aspect
@@ -180,9 +182,10 @@ LEXICON IVclassmarker ! only used in completive aspect
 @U.COMP.YES@@U.ActIV.NO@.affiv:@U.COMP.YES@@U.ActIV.NO@-' # ;
 
 LEXICON ObjAgr
--1sg.comp:-n' # ;
--2sg.comp:-ka' # ;
+! -1sg.comp:-n' # ;
+! -2sg.comp:-ka' # ;
 -3sg.comp:-y' # ;
--1pl.comp:-k # ;
--2pl.comp:-ka'% ay # ;
--3pl.comp:-y'% ay% %(lhik%) # ;
+! -1pl.comp:-k # ;
+! -2pl.comp:-ka'% ay # ;
+! -3pl.comp:-y'% ay% %(lhik%) # ;
+# ;

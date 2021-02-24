@@ -82,7 +82,7 @@ Vx:Vy <=> # (C) _ C V %{AFF%}: ;
  ! This rule says delete NC after a lower side G followed by a vowel and a word boundary. 
  ! The {NC}:0 correspondence is only possible after :G V _
 
- "Plural Suffix harmony"
+"Plural Suffix harmony"
 %{F%}:e <=> M %-lh _ ;
             M C %-lh _ ;
 

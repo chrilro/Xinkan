@@ -10,7 +10,6 @@ Multichar_Symbols
 @U.NOM.NO@
 @U.COMP.YES@
 @U.COMP.NO@
-@U.Pref.YES@
 @U.ActIV.YES@
 @U.ActIV.NO@
 @U.Pref.YES@
@@ -46,7 +45,7 @@ a- a(ay)-
 %{NC%} %{AFF%}
 
 !=========!
-!==Nouns==!
+!==NOUNS==!
 !=========!
 
 !Flags for Nouns

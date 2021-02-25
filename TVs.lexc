@@ -15,3 +15,4 @@ LEXICON Aspect
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
 @U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
+@U.NOM.YES@.vn:%{NC%}@U.NOM.YES@ # ;

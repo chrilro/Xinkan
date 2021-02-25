@@ -1,0 +1,355 @@
+Multichar_Symbols
+!=========!
+!==VERBS==!
+!=========!
+
+!Flags for verbs
+@U.TV.NO@
+@U.TV.YES@
+@U.NOM.YES@
+@U.NOM.NO@
+@U.COMP.YES@
+@U.COMP.NO@
+@U.ActIV.YES@
+@U.ActIV.NO@
+@U.Pref.YES@
+@U.Pref.NO@
+
+!=Agreement for verbs=!
+!SETA
+-1sg.comp -2sg.comp -3sg.comp -1pl.comp -2pl.comp -3pl.comp
+-n' -ka' -y' -k -ka'% ay -y'% ay% %(lhik%)
+
+!SETB for nouns and verbs
+1sg 2sg 3sg 1pl 2pl 3pl
+ɨn- ka'- mu- muk- ka(ay)- mu(ay)-
+
+!SetB Functions
+.subj .poss
+
+!SetC and D
+1sg- 2sg- 3sg- 1pl- 2pl- 3pl-
+!SetC (all of SetB except for 3sg and 3pl forms)
+%0- %0(ay)-
+!SetD (add of SetB except for 3sg and 3pl forms)
+a- a(ay)-
+
+!Aspect for verbs
+.comp .incomp .vn
+
+!IVClassmarkers
+-act -aff
+-lha' -'
+
+!Ghost Tags for IVs
+%{NC%} %{AFF%}
+
+!=========!
+!==NOUNS==!
+!=========!
+
+!Flags for Nouns
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+
+!SetE = similar to Set A except 3sg and 3pl forms
+-1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
+-h -h% lhik
+
+!==============!
+!==ADJECTIVES==!
+!==============!
+
+!Flags for adjective possession
+@U.ADJ.YES@
+@U.ADJ.NO@
+
+!Orthographic symbols
+ch
+ch'
+ts'
+l'
+k'
+p'
+t'
+w'
+r'
+n'
+m'
+y'
+
+LEXICON Root
+    Nouns ;
+    Verbs ;
+    @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
+    @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
+    Pronominals ; ! Found in Seperate lexc files
+    Particles ; ! Found in Seperate lexc files
+
+LEXICON Verbs ! Found in Seperate lexc files
+    Intransitive ;
+    Transitive ;
+
+LEXICON Nouns ! Found in Seperate lexc files
+    Diminutive ;
+@U.ALIEN.YES@ Alienable ;
+@U.ALIEN.NO@ Inalienable ;
+    Variable ;
+
+! Affixes found in a seperate lexc file
+! The complete template for TV verbs. There are 3 inflectional stems (3 paradigms)
+! Bare = VN, ICOMP, COMP
+! Inflected = SETB-VN, COMP-SETA, SETB-INCOMP
+
+LEXICON Transitive
+@U.TV.YES@  SetB ;
+@U.TV.YES@  TVstems ;
+
+LEXICON TVstems
+xuka Aspect ;
+
+LEXICON Aspect
+@U.Pref.NO@@U.NOM.NO@@U.TV.YES@.comp:@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ SetA ; !TV completive
+@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
+@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
+@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
+@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
+@U.NOM.YES@.vn:%{NC%}@U.NOM.YES@ # ;
+LEXICON Intransitive
+@U.NOM.YES@ SetB ;
+@U.COMP.YES@ SetC ;
+@U.COMP.NO@ SetD ;
+ IVclass ;
+
+LEXICON IVclass 
+@U.TV.NO@@U.ActIV.YES@ ActIVroots ;
+@U.TV.NO@@U.ActIV.NO@ AffIVroots ;
+
+LEXICON ActIVroots
+mɨka Aspect ;
+
+LEXICON AffIVroots
+yana Aspect ;
+
+LEXICON IVclassmarker
+@U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;
+@U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
+
+! Verb and Noun head-marking
+
+! LEXICON SetA
+! ! @U.Pref.NO@-1sg.comp:@U.Pref.NO@-n' # ;
+! ! @U.Pref.NO@-2sg.comp:@U.Pref.NO@-ka' # ;
+! @U.Pref.NO@-3sg.comp:@U.Pref.NO@-y' # ;
+! ! @U.Pref.NO@-1pl.comp:@U.Pref.NO@-k # ;
+! ! @U.Pref.NO@-2pl.comp:@U.Pref.NO@-ka'% ay # ;
+! ! @U.Pref.NO@-3pl.comp:@U.Pref.NO@-y'% ay% %(lhik%) # ;
+! # ;
+
+! LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incompletive
+! ! @U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+! ! @U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
+! @U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
+! ! @U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
+! ! @U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
+! ! @U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+
+! LEXICON SetBFunction
+! @U.NOM.NO@.subj-:@U.NOM.NO@ TVstems ; ! TV incompletive
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 TVstems ; !TV Verbal nouns
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
+! @U.NOM.YES@.poss-:@U.NOM.YES@0 VNstems ; ! Variable nouns
+
+! LEXICON SetC !IV completive aspect
+! ! @U.NOM.NO@1sg.comp-:@U.NOM.NO@ɨn- IVclass ;
+! ! @U.NOM.NO@2sg.comp-:@U.NOM.NO@ka- IVclass ;
+! @U.NOM.NO@3sg.comp-:@U.NOM.NO@%0- IVclass ;
+! ! @U.NOM.NO@1pl.comp-:@U.NOM.NO@muk- IVclass ;
+! ! @U.NOM.NO@2pl.comp-:@U.NOM.NO@ka(ay) IVclass ;
+! ! @U.NOM.NO@3pl.comp-:@U.NOM.NO@%0(ay)- IVclass ;
+
+! LEXICON SetD !IV incompletive aspect
+! ! @U.NOM.NO@1sg.incomp-:@U.NOM.NO@ɨn- IVclass ;
+! ! @U.NOM.NO@2sg.incomp-:@U.NOM.NO@ka- IVclass ;
+! @U.NOM.NO@3sg.incomp-:@U.NOM.NO@a- IVclass ;
+! ! @U.NOM.NO@1pl.incomp-:@U.NOM.NO@muk- IVclass ;
+! ! @U.NOM.NO@2pl.incomp-:@U.NOM.NO@ka(ay) IVclass ;
+! ! @U.NOM.NO@3pl.incomp-:@U.NOM.NO@a(ay)- IVclass ;
+
+! LEXICON SetE !Possession for inalienable nouns
+! @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-n' # ;
+! @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka' # ;
+! @U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-3sg.poss:@U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-h # ;
+! @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-k # ;
+! @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka% ay # ;
+! @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-3pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-h% lhik # ;
+! # ;
+
+
+
+
+!Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
+
+LEXICON Alienable
+    SetB ;
+    ANsubclasses ;
+
+LEXICON ANsubclasses
+    Count ;
+    Mass ;
+
+LEXICON Count
+huurak Number ;
+
+LEXICON Mass
+uy Number ;
+!Complete Template for Inalienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
+
+LEXICON Inalienable
+    IANstems ;
+
+LEXICON IANstems 
+nuuru Number ;
+
+
+
+!Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
+
+LEXICON Variable
+    SetB ;
+    VNstems ;
+
+LEXICON VNstems 
+mɨn'a Number ;!Complete Template for Adjectives. There are 1 stem and 1 possession (only 3sg) = 2 forms total
+
+LEXICON Adjectives
+ts'ama SetE ;
+ɨran SetE ;
+hawa SetE ;
+pari SetE ;
+mɨr'a SetE ;
+pɨts'a SetE ;
+
+!Complete Template for Adpositios Nouns. There are 1 stems and 1 possession = 2 forms total
+
+LEXICON Adpositions
+alh SetE ;
+ʃa SetE ;
+neelha SetE ;
+hiná SetE ;
+ʃam'a SetE ;
+par'a SetE ;
+ɨɨlɨ SetE ;
+huuʃi SetE ;
+ti'i SetE ;
+'i SetE ;
+kiki SetE ;
+!Complete list of all the uninflectable words. 2 types.
+
+LEXICON Particles
+    Nominalparticles ;
+    Verbalparticles ;
+
+LEXICON Nominalparticles
+kumu # ;
+ki' # ;
+na # ;
+
+LEXICON Verbalparticles
+pe' # ;
+wa # ;
+wan # ;
+i # ;
+pero # ;
+o # ;
+palh # ;
+nalh # ;
+!Complete list of pronominal elements 3 types.
+
+LEXICON Pronominals
+    Interrogative ;
+    Personal ;
+    Demonstratives ;
+
+LEXICON Interrogative
+ka(a)ta # ;
+weena # ;
+handa' # ;
+han # ;
+han% alhi # ;
+lhɨkɨ # ;
+iwalh # ;
+
+LEXICON Personal
+nɨn # ;
+naká # ;
+nah # ;
+neelhek # ;
+
+LEXICON Demonstratives
+man # ;
+nan'ah # ;! Verb and Noun head-marking
+
+LEXICON SetA
+@U.Pref.NO@-1sg.comp:@U.Pref.NO@-n' # ;
+@U.Pref.NO@-2sg.comp:@U.Pref.NO@-ka' # ;
+@U.Pref.NO@-3sg.comp:@U.Pref.NO@-y' # ;
+@U.Pref.NO@-1pl.comp:@U.Pref.NO@-k # ;
+@U.Pref.NO@-2pl.comp:@U.Pref.NO@-ka'% ay # ;
+@U.Pref.NO@-3pl.comp:@U.Pref.NO@-y'% ay% %(lhik%) # ;
+# ;
+
+LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incompletive
+@U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+@U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
+@U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
+@U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
+@U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
+@U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+
+LEXICON SetBFunction
+@U.NOM.NO@.subj-:@U.NOM.NO@ TVstems ; ! TV incompletive
+@U.NOM.YES@.poss-:@U.NOM.YES@0 TVstems ; !TV Verbal nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 VNstems ; ! Variable nouns
+
+LEXICON SetC !IV completive aspect
+@U.NOM.NO@1sg.comp-:@U.NOM.NO@ɨn- IVclass ;
+@U.NOM.NO@2sg.comp-:@U.NOM.NO@ka- IVclass ;
+@U.NOM.NO@3sg.comp-:@U.NOM.NO@%0- IVclass ;
+@U.NOM.NO@1pl.comp-:@U.NOM.NO@muk- IVclass ;
+@U.NOM.NO@2pl.comp-:@U.NOM.NO@ka(ay) IVclass ;
+@U.NOM.NO@3pl.comp-:@U.NOM.NO@%0(ay)- IVclass ;
+
+LEXICON SetD !IV incompletive aspect
+@U.NOM.NO@1sg.incomp-:@U.NOM.NO@ɨn- IVclass ;
+@U.NOM.NO@2sg.incomp-:@U.NOM.NO@ka- IVclass ;
+@U.NOM.NO@3sg.incomp-:@U.NOM.NO@a- IVclass ;
+@U.NOM.NO@1pl.incomp-:@U.NOM.NO@muk- IVclass ;
+@U.NOM.NO@2pl.incomp-:@U.NOM.NO@ka(ay) IVclass ;
+@U.NOM.NO@3pl.incomp-:@U.NOM.NO@a(ay)- IVclass ;
+
+LEXICON SetE !Possession for inalienable nouns
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-n' # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka' # ;
+@U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-3sg.poss:@U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-h # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-k # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka% ay # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-3pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-h% lhik # ;
+# ;
+
+!Noun specific affixes
+
+LEXICON Diminutive
+@U.ALIEN.YES@dim-:@U.ALIEN.YES@chu- Alienable ;
+@U.ALIEN.NO@dim-:@U.ALIEN.NO@chu- Inalienable ;
+
+LEXICON Number
+.sg:0 SetE ;
+-pl:-lh%{F%} SetE ;
+
+
+
+

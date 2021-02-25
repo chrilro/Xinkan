@@ -7,70 +7,46 @@
 
 # The ana.png file breaks since no image can fit inside of it. So I commented that out.
 
-all : verbs.lexc \
-	nouns.lexc \
-	lexicon.lexc \
-	phon.hfst \
-	complete.hfst \
-	gen.hfstol \
-	ana.hfstol \
-	lexicon.png
+all : Xinkan.lexc \
+	phonology.hfst \
+	Xinkan_complete.hfst \
+	Xinkan_gen.hfst \
+	Xinkan_ana.hfst \
+	Xinkan_gen.hfstol \
+	Xinkan_ana.hfstol \
+	Xinkan_lexicon.png
 	#ana.png 
 
-Verbs.hfst : Verbs.lexc
-	hfst-lexc Verbs.lexc > Verbs.hfst
+Xinkan.lexc : root.lexc TVs.lexc IVs.lexc AlienN.lexc InalienN.lexc VariableN.lexc Adjectives.lexc Adpositions.lexc Particles.lexc Pronominals.lexc Affixes.lexc
+	cat root.lexc TVs.lexc IVs.lexc AlienN.lexc InalienN.lexc VariableN.lexc Adjectives.lexc Adpositions.lexc Particles.lexc Pronominals.lexc Affixes.lexc > Xinkan.lexc
 
-Vphon.hfst : Vphon.twolc
-	hfst-twolc Vphon.twolc > Vphon.hfst
+phonology.hfst : phonology.twolc
+	hfst-twolc phonology.twolc > phonology.hfst
 
-Vcomplete.hfst : Verbs.hfst Vphon.hfst
-	hfst-compose-intersect -1 Verbs.hfst -2 Vphon.hfst > Vcomplete.hfst
+Xinkan_gen.hfst : Xinkan.lexc
+	hfst-lexc < Xinkan.lexc > Xinkan_gen.hfst
 
-Nouns.hfst : Nouns.lexc
-	hfst-lexc Nouns.lexc > Nouns.hfst
+Xinkan_complete.hfst : Xinkan_gen.hfst phonology.hfst
+	hfst-compose-intersect -1 Xinkan_gen.hfst -2 phonology.hfst > Xinkan_complete.hfst
 
-Nphon.hfst : Nphon.twolc
-	hfst-twolc Nphon.twolc > Nphon.hfst
+Xinkan_gen.hfstol : Xinkan_complete.hfst
+	hfst-fst2fst --optimized-lookup-unweighted -i Xinkan_complete.hfst -o Xinkan_gen.hfstol
 
-Ncomplete.hfst : Nouns.hfst Nphon.hfst
-	hfst-compose-intersect -1 Nouns.hfst -2 Nphon.hfst > Ncomplete.hfst
+Xinkan_ana.hfst : Xinkan_complete.hfst
+	hfst-invert -i Xinkan_complete.hfst -o Xinkan_ana.hfst
 
-verbs.lexc : Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc
-	cat Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc > verbs.lexc
-
-nouns.lexc : Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc
-	cat Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc > nouns.lexc
-
-lexicon.lexc : Root.lexc verbs.lexc nouns.lexc Particles.lexc PrefixAgr.lexc SuffixAgr.lexc
-	cat Root.lexc Particles.lexc PrefixAgr.lexc verbs.lexc nouns.lexc SuffixAgr.lexc > lexicon.lexc
-
-phon.hfst : phon.twolc
-	hfst-twolc phon.twolc > phon.hfst
-
-gen.hfst : lexicon.lexc
-	hfst-lexc < lexicon.lexc > gen.hfst
-
-complete.hfst : gen.hfst phon.hfst
-	hfst-compose-intersect -1 gen.hfst -2 phon.hfst > complete.hfst
-
-gen.hfstol : complete.hfst
-	hfst-fst2fst --optimized-lookup-unweighted -i complete.hfst -o gen.hfstol
-
-ana.hfst : complete.hfst
-	hfst-invert -i complete.hfst -o ana.hfst
-
-ana.hfstol : ana.hfst
-	hfst-fst2fst --optimized-lookup-unweighted -i ana.hfst -o ana.hfstol
+Xinkan_ana.hfstol : Xinkan_ana.hfst
+	hfst-fst2fst --optimized-lookup-unweighted -i Xinkan_ana.hfst -o Xinkan_ana.hfstol
 
 #ana.png : ana.hfstol
 #	hfst-fst2txt ana.hfstol | python3 att2dot.py | dot -T png -o ana.png
 
-lexicon.png : lexicon.lexc
-	python3 lexc2dot.py < lexicon.lexc | dot -T png -o lexicon.png
+Xinkan_lexicon.png : Xinkan.lexc
+	python3 lexc2dot.py < Xinkan.lexc | dot -T png -o Xinkan_lexicon.png
 
 .PHONY : clean
 clean :
-	-rm *.hfst *.hfstol lexicon.lexc *.png
+	-rm *.hfst *.hfstol Xinkan.lexc *.png
 
 .PHONY : test
 test :

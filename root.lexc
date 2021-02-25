@@ -88,12 +88,12 @@ LEXICON Root
 
 LEXICON Verbs ! Found in Seperate lexc files
     Intransitive ;
-    Transitve ;
+    Transitive ;
 
 LEXICON Nouns ! Found in Seperate lexc files
     Diminutive ;
 @U.ALIEN.YES@ Alienable ;
-@U.ALIEN.NO@ Ialienable ;
+@U.ALIEN.NO@ Inalienable ;
     Variable ;
 
 ! Affixes found in a seperate lexc file

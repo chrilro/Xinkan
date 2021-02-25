@@ -41,12 +41,12 @@ LEXICON SetD !IV incompletive aspect
 @U.NOM.NO@3pl.incomp-:@U.NOM.NO@a(ay)- IVclass ;
 
 LEXICON SetE !Possession for inalienable nouns
-@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.Pref.NO@@U.ALIEN.NO@-n' # ;
-@U.Pref.NO@@U.ALIEN.NO@-2sg.poss:@U.Pref.NO@@U.ALIEN.NO@-ka' # ;
-@U.Pref.NO@@U.ALIEN.NO@-3sg.poss:@U.Pref.NO@@U.ALIEN.NO@-h # ;
-@U.Pref.NO@@U.ALIEN.NO@-1pl.poss:@U.Pref.NO@@U.ALIEN.NO@-k # ;
-@U.Pref.NO@@U.ALIEN.NO@-2pl.poss:@U.Pref.NO@@U.ALIEN.NO@-ka% ay # ;
-@U.Pref.NO@@U.ALIEN.NO@-3pl.poss:@U.Pref.NO@@U.ALIEN.NO@-h% lhik # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-n' # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka' # ;
+@U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-3sg.poss:@U.ADJ.YES@@U.Pref.NO@@U.ALIEN.NO@-h # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-k # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-2pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-ka% ay # ;
+@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-3pl.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-h% lhik # ;
 # ;
 
 !Noun specific affixes

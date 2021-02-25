@@ -56,6 +56,14 @@ a- a(ay)-
 -1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
 -h -h% lhik
 
+!==============!
+!==ADJECTIVES==!
+!==============!
+
+!Flags for adjective possession
+@U.ADJ.YES@
+@U.ADJ.NO@
+
 !Orthographic symbols
 ch
 ch'
@@ -73,17 +81,19 @@ y'
 LEXICON Root
     Nouns ;
     Verbs ;
-    AdposPossclass ;
-    AdjPossclass ;
-    ParticleClass ;
-    QuestionWords ;
+    @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
+    @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
+    Pronominals ; ! Found in Seperate lexc files
+    Particles ; ! Found in Seperate lexc files
 
-LEXICON Verbs
+LEXICON Verbs ! Found in Seperate lexc files
     Intransitive ;
     Transitve ;
 
-LEXICON Nouns
+LEXICON Nouns ! Found in Seperate lexc files
     Diminutive ;
 @U.ALIEN.YES@ Alienable ;
 @U.ALIEN.NO@ Ialienable ;
     Variable ;
+
+! Affixes found in a seperate lexc file

@@ -1,15 +1,11 @@
-Multichar_Symbols
-% 
-
-LEXICON Root
-    Pronominals ;
+!Complete list of pronominal elements 3 types.
 
 LEXICON Pronominals
-    QuestionWords ;
-    Pronouns ;
+    Interrogative ;
+    Personal ;
     Demonstratives ;
 
-LEXICON QuestionWords
+LEXICON Interrogative
 ka(a)ta # ;
 weena # ;
 handa' # ;
@@ -18,7 +14,7 @@ han% alhi # ;
 lhɨkɨ # ;
 iwalh # ;
 
-LEXICON Pronouns
+LEXICON Personal
 nɨn # ;
 naká # ;
 nah # ;

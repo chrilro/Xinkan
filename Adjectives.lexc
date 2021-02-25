@@ -1,28 +1,4 @@
-!While SetE is the same for Nouns and Adpositions, I repeated the 3sg form with just an adjective tag.
-
-Multichar_Symbols
-@U.ALIEN.NO@
-@U.ALIEN.YES@
-@U.ADJ.YES@
-@U.ADJ.NO@
--1sg.poss
--2sg.poss
--3sg.poss
--1pl.poss
--2pl.poss
--3pl.poss
--n'
--ka'
--h
--k
--ka% ay
--h% lhik
-
-LEXICON Root
-    AdjPossclass ;
-
-LEXICON AdjPossclass 
-@U.ALIEN.NO@@U.ADJ.YES@ Adjectives ;
+!Complete Template for Adjectives. There are 1 stem and 1 possession (only 3sg) = 2 forms total
 
 LEXICON Adjectives
 ts'ama SetE ;
@@ -32,13 +8,3 @@ pari SetE ;
 mɨr'a SetE ;
 pɨts'a SetE ;
 
-LEXICON SetE
-@U.ADJ.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-n' # ;
-@U.ADJ.NO@@U.ALIEN.NO@-2sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-ka' # ;
-@U.ADJ.NO@@U.ALIEN.NO@-3sg.poss:@U.ADJ.NO@@U.ALIEN.NO@-h # ;
-@U.ADJ.YES@@U.ALIEN.NO@-3sg.poss:@U.ADJ.YES@@U.ALIEN.NO@-h # ;
-@U.ADJ.NO@@U.ALIEN.NO@-1pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-k # ;
-@U.ADJ.NO@@U.ALIEN.NO@-2pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-ka% ay # ;
-@U.ADJ.NO@@U.ALIEN.NO@-3pl.poss:@U.ADJ.NO@@U.ALIEN.NO@-h% lhik # ;
-@U.ALIEN.YES@ # ;
-@U.ADJ.YES@@U.ALIEN.NO@ # ;

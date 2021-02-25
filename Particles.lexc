@@ -1,11 +1,6 @@
-!File of all the uninflectable words
+!Complete list of all the uninflectable words. 2 types.
 
-Multichar_Symbols
-
-LEXICON Root
-    ParticleClass ;
-
-LEXICON ParticleClass
+LEXICON Particles
     Nominalparticles ;
     Verbalparticles ;
 

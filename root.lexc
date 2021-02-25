@@ -1,0 +1,90 @@
+Multichar_Symbols
+!=========!
+!==VERBS==!
+!=========!
+
+!Flags for verbs
+@U.TV.NO@
+@U.TV.YES@
+@U.NOM.YES@
+@U.NOM.NO@
+@U.COMP.YES@
+@U.COMP.NO@
+@U.Pref.YES@
+@U.ActIV.YES@
+@U.ActIV.NO@
+@U.Pref.YES@
+@U.Pref.NO@
+
+!=Agreement for verbs=!
+!SETA
+-1sg.comp -2sg.comp -3sg.comp -1pl.comp -2pl.comp -3pl.comp
+-n' -ka' -y' -k -ka'% ay -y'% ay% %(lhik%)
+
+!SETB for nouns and verbs
+1sg 2sg 3sg 1pl 2pl 3pl
+ɨn- ka'- mu- muk- ka(ay)- mu(ay)-
+
+!SetB Functions
+.subj .poss
+
+!SetC and D
+1sg- 2sg- 3sg- 1pl- 2pl- 3pl-
+!SetC (all of SetB except for 3sg and 3pl forms)
+%0- %0(ay)-
+!SetD (add of SetB except for 3sg and 3pl forms)
+a- a(ay)-
+
+!Aspect for verbs
+.comp .incomp .vn
+
+!IVClassmarkers
+-act -aff
+-lha' -'
+
+!Ghost Tags for IVs
+%{NC%} %{AFF%}
+
+!=========!
+!==Nouns==!
+!=========!
+
+!Flags for Nouns
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+
+!SetE = similar to Set A except 3sg and 3pl forms
+-1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
+-h -h% lhik
+
+!Orthographic symbols
+ch
+ch'
+ts'
+l'
+k'
+p'
+t'
+w'
+r'
+n'
+m'
+y'
+
+LEXICON Root
+    Nouns ;
+    Verbs ;
+    AdposPossclass ;
+    AdjPossclass ;
+    ParticleClass ;
+    QuestionWords ;
+
+LEXICON Verbs
+    Intransitive ;
+    Transitve ;
+
+LEXICON Nouns
+    Diminutive ;
+@U.ALIEN.YES@ Alienable ;
+@U.ALIEN.NO@ Ialienable ;
+    Variable ;

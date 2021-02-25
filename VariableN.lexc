@@ -1,0 +1,122 @@
+!Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
+
+Multichar_Symbols
+!=========!
+!==VERBS==!
+!=========!
+
+!Flags for verbs
+@U.TV.NO@
+@U.TV.YES@
+@U.NOM.YES@
+@U.NOM.NO@
+@U.COMP.YES@
+@U.COMP.NO@
+@U.Pref.YES@
+@U.ActIV.YES@
+@U.ActIV.NO@
+@U.Pref.YES@
+@U.Pref.NO@
+
+!=Agreement for verbs=!
+!SETA
+-1sg.comp -2sg.comp -3sg.comp -1pl.comp -2pl.comp -3pl.comp
+-n' -ka' -y' -k -ka'% ay -y'% ay% %(lhik%)
+
+!SETB for nouns and verbs
+1sg 2sg 3sg 1pl 2pl 3pl
+ɨn- ka'- mu- muk- ka(ay)- mu(ay)-
+
+!SetB Functions
+.subj .poss
+
+!SetC and D
+1sg- 2sg- 3sg- 1pl- 2pl- 3pl-
+!SetC (all of SetB except for 3sg and 3pl forms)
+%0- %0(ay)-
+!SetD (add of SetB except for 3sg and 3pl forms)
+a- a(ay)-
+
+!Aspect for verbs
+.comp .incomp .vn
+
+!IVClassmarkers
+-act -aff
+-lha' -'
+
+!Ghost Tags for IVs
+%{NC%} %{AFF%}
+
+!=========!
+!==Nouns==!
+!=========!
+!Flags for Nouns
+@U.ALIEN.YES@
+@U.ALIEN.NO@
+
+!SetE = similar to Set A except 3sg and 3pl forms
+-1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
+-h -h% lhik
+
+!Orthographic symbols
+ch
+ch'
+ts'
+l'
+k'
+p'
+t'
+w'
+r'
+n'
+m'
+y'
+
+LEXICON Root
+    Nouns ;
+
+LEXICON Nouns
+    Diminutive ;
+!@U.ALIEN.YES@ Alienable ;
+!@U.ALIEN.NO@ Ialienable ;
+    Variable ;
+
+LEXICON Diminutive
+!@U.ALIEN.YES@dim-:@U.ALIEN.YES@chu- Alienable ;
+!@U.ALIEN.YES@dim-:@U.ALIEN.YES@chu- Inalienable ;
+dim-:chu-   Variable ;
+
+LEXICON Variable
+    SetB ;
+    VNstems ;
+
+LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incompletive
+! @U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
+! @U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
+@U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
+! @U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
+! @U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
+! @U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+
+LEXICON SetBFunction
+@U.NOM.NO@.subj-:@U.NOM.NO@ TVstems ; ! TV incompletive
+@U.NOM.YES@.poss-:@U.NOM.YES@0 TVstems ; !TV Verbal nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 VNstems ; ! Variable nouns
+
+LEXICON VNstems 
+mɨn'a Number ;
+
+LEXICON Number
+.sg:0 SetE ;
+-pl:-lh%{F%} SetE ;
+
+LEXICON SetE
+! @U.ALIEN.NO@-1sg.poss:@U.ALIEN.NO@-n' # ;
+! @U.ALIEN.NO@-2sg.poss:@U.ALIEN.NO@-ka' # ;
+@U.Pref.NO@@U.ALIEN.NO@-3sg.poss:@U.Pref.NO@@U.ALIEN.NO@-h # ;
+! @U.ALIEN.NO@-1pl.poss:@U.ALIEN.NO@-k # ;
+! @U.ALIEN.NO@-2pl.poss:@U.ALIEN.NO@-ka% ay # ;
+! @U.ALIEN.NO@-3pl.poss:@U.ALIEN.NO@-h% lhik # ;
+# ;

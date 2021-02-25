@@ -1,0 +1,15 @@
+!Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
+
+LEXICON Alienable
+    SetB ;
+    ANsubclasses ;
+
+LEXICON ANsubclasses
+    Count ;
+    Mass ;
+
+LEXICON Count
+huurak Number ;
+
+LEXICON Mass
+uy Number ;

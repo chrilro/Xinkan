@@ -1,0 +1,7 @@
+!Complete Template for Inalienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
+
+LEXICON Inalienable
+    IANstems ;
+
+LEXICON IANstems 
+nuuru Number ;

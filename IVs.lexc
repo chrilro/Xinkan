@@ -5,45 +5,11 @@
 ! The %{NC%} is a ghost for glottalization
 ! The %{AFF%} is a ghost for vowel length
 
-Multichar_Symbols
-@U.TV.NO@
-@U.TV.YES@
-@U.NOM.YES@
-@U.NOM.NO@
-@U.COMP.YES@
-@U.COMP.NO@
-@U.Pref.YES@
-@U.ActIV.YES@
-@U.ActIV.NO@
-
-LEXICON Root
-    Verbs ;
-    
-LEXICON Verbs
-Intransitive ;
-
 LEXICON Intransitive
 @U.NOM.YES@ SetB ;
 @U.COMP.YES@ SetC ;
 @U.COMP.NO@ SetD ;
 @U.TV.NO@ IVclass ;
-
-LEXICON SetB ! possession for all verbal nouns and tv incompletive
-! @U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
-! @U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
-3sg:mu- SetBFunction ;
-! @U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
-! @U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
-! @U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
-
-LEXICON SetBFunction
-@U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; 
-
-LEXICON SetC
-@U.NOM.NO@3sg-:@U.NOM.NO@%0- IVclass ;
-
-LEXICON SetD
-@U.NOM.NO@3sg-:@U.NOM.NO@a- IVclass ;
 
 LEXICON IVclass 
 @U.ActIV.YES@ ActIVroots ;
@@ -54,13 +20,6 @@ mɨka Aspect ;
 
 LEXICON AffIVroots
 yana Aspect ;
-
-LEXICON Aspect
-@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ;
-@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ;
-@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker;
-@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ;
-@U.NOM.YES@.vn:@U.NOM.YES@%{NC%} # ;
 
 LEXICON IVclassmarker
 @U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;

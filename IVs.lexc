@@ -13,7 +13,3 @@ mɨka Aspect ;
 
 LEXICON AffIVroots
 yana Aspect ;
-
-LEXICON IVclassmarker
-@U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;
-@U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;

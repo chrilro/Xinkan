@@ -114,6 +114,7 @@ LEXICON Aspect
 @U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
+@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
 @U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
 @U.NOM.YES@.vn:%{NC%}@U.NOM.YES@ # ;
 LEXICON Intransitive
@@ -131,10 +132,6 @@ mɨka Aspect ;
 
 LEXICON AffIVroots
 yana Aspect ;
-
-LEXICON IVclassmarker
-@U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;
-@U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
 !Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
 
 LEXICON Alienable
@@ -303,20 +300,20 @@ LEXICON SetBFunction
 @U.NOM.YES@.poss-:@U.NOM.YES@0 VariableNstems ; ! Variable nouns
 
 LEXICON SetC !IV completive aspect
-@U.NOM.NO@1sg.comp-:@U.NOM.NO@ɨn- IVclass ;
-@U.NOM.NO@2sg.comp-:@U.NOM.NO@ka- IVclass ;
-@U.NOM.NO@3sg.comp-:@U.NOM.NO@%0- IVclass ;
-@U.NOM.NO@1pl.comp-:@U.NOM.NO@muk- IVclass ;
-@U.NOM.NO@2pl.comp-:@U.NOM.NO@ka(ay) IVclass ;
-@U.NOM.NO@3pl.comp-:@U.NOM.NO@%0(ay)- IVclass ;
+@U.Pref.YES@@U.NOM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
+@U.Pref.YES@@U.NOM.NO@2sg.comp-:@U.Pref.YES@@U.NOM.NO@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@3sg.comp-:@U.Pref.YES@@U.NOM.NO@%0- IVclass ;
+@U.Pref.YES@@U.NOM.NO@1pl.comp-:@U.Pref.YES@@U.NOM.NO@muk- IVclass ;
+@U.Pref.YES@@U.NOM.NO@2pl.comp-:@U.Pref.YES@@U.NOM.NO@ka(ay) IVclass ;
+@U.Pref.YES@@U.NOM.NO@3pl.comp-:@U.Pref.YES@@U.NOM.NO@%0(ay)- IVclass ;
 
 LEXICON SetD !IV incompletive aspect
-@U.NOM.NO@1sg.incomp-:@U.NOM.NO@ɨn- IVclass ;
-@U.NOM.NO@2sg.incomp-:@U.NOM.NO@ka- IVclass ;
-@U.NOM.NO@3sg.incomp-:@U.NOM.NO@a- IVclass ;
-@U.NOM.NO@1pl.incomp-:@U.NOM.NO@muk- IVclass ;
-@U.NOM.NO@2pl.incomp-:@U.NOM.NO@ka(ay) IVclass ;
-@U.NOM.NO@3pl.incomp-:@U.NOM.NO@a(ay)- IVclass ;
+@U.Pref.YES@@U.NOM.NO@1sg.incomp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
+@U.Pref.YES@@U.NOM.NO@2sg.incomp-:@U.Pref.YES@@U.NOM.NO@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@3sg.incomp-:@U.Pref.YES@@U.NOM.NO@a- IVclass ;
+@U.Pref.YES@@U.NOM.NO@1pl.incomp-:@U.Pref.YES@@U.NOM.NO@muk- IVclass ;
+@U.Pref.YES@@U.NOM.NO@2pl.incomp-:@U.Pref.YES@@U.NOM.NO@ka(ay) IVclass ;
+@U.Pref.YES@@U.NOM.NO@3pl.incomp-:@U.Pref.YES@@U.NOM.NO@a(ay)- IVclass ;
 
 LEXICON SetE !Possession for inalienable nouns
 @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-n' # ;
@@ -337,6 +334,13 @@ LEXICON Number
 .sg:0 SetE ;
 -pl:-lh%{F%} SetE ;
 
+!IV specfic affixes
+LEXICON IVclassmarker
+@U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;
+@U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
+
+LEXICON IVImperative
+@U.Pref.NO@-imp:@U.Pref.NO@-y'a # ;
 
 
 

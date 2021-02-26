@@ -2,9 +2,16 @@
 
 LEXICON Inalienable
     IANstems ;
+    Proper ;
 
 LEXICON IANstems 
 nuuru Number ;
+
+LEXICON Proper
+Hwan # ;
+Tuuru' # ;
+Sipani # ;
+
 
 
 

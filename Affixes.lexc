@@ -22,7 +22,7 @@ LEXICON SetBFunction
 @U.NOM.YES@.poss-:@U.NOM.YES@0 TVstems ; !TV Verbal nouns
 @U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
 @U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 VNstems ; ! Variable nouns
+@U.NOM.YES@.poss-:@U.NOM.YES@0 VariableNstems ; ! Variable nouns
 
 LEXICON SetC !IV completive aspect
 @U.NOM.NO@1sg.comp-:@U.NOM.NO@ɨn- IVclass ;

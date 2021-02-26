@@ -2,7 +2,7 @@
 
 LEXICON Variable
     SetB ;
-    VNstems ;
+    VariableNstems ;
 
-LEXICON VNstems 
+LEXICON VariableNstems 
 mɨn'a Number ;

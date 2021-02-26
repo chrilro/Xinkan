@@ -1,6 +1,7 @@
 ! The complete template for TV verbs. There are 3 inflectional stems (3 paradigms)
 ! Bare = VN, ICOMP, COMP
 ! Inflected = SETB-VN, COMP-SETA, SETB-INCOMP
+! Contrastive focus -lhan
 
 LEXICON Transitive
 @U.TV.YES@  SetB ;

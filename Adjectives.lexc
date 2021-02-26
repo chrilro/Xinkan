@@ -1,6 +1,11 @@
 !Complete Template for Adjectives. There are 1 stem and 1 possession (only 3sg) = 2 forms total
+!Also two types of quantifiers
 
 LEXICON Adjectives
+    Adjectivestems ;
+    Quantifiers ;
+
+LEXICON Adjectivestems
 ts'ama SetE ;
 ɨran SetE ;
 hawa SetE ;
@@ -8,3 +13,24 @@ pari SetE ;
 mɨr'a SetE ;
 pɨts'a SetE ;
 
+LEXICON Quantifiers
+    Numerals ;
+    Abstract ;
+
+LEXICON Numerals 
+ik'alh # ;
+piy' # ;
+walh # ;
+hirya # ;
+pɨhɨ # ;
+ta'alh  # ; 
+
+
+LEXICON Abstract
+tumuki' # ;
+teena' # ;
+kɨtɨk # ;
+yaalha' # ;
+puulha' # ;
+puy # ;
+hin # ;

@@ -4,6 +4,7 @@ LEXICON Pronominals
     Interrogative ;
     Personal ;
     Demonstratives ;
+    Determiners ;
 
 LEXICON Interrogative
 ka(a)ta # ;
@@ -15,11 +16,18 @@ lhɨkɨ # ;
 iwalh # ;
 
 LEXICON Personal
-nɨn # ;
-naká # ;
+nen' # ;
+naka # ;
 nah # ;
 neelhek # ;
+neelhak(ay) # ;
+naka(ay) # ;
+naalik # ;
 
 LEXICON Demonstratives
 man # ;
-nan'ah # ;
+hɨ' # ;
+
+LEXICON Determiners
+na # ; 
+k'alh # ;

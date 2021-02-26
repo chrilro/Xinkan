@@ -65,7 +65,10 @@ LEXICON IVclassmarker
 @U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
 
 LEXICON IVImperative
-@U.Pref.NO@-imp:@U.Pref.NO@-y'a # ;
+@U.Pref.NO@-imp.iv:@U.Pref.NO@-y'a # ;
+
+LEXICON TVImperative
+-imp.tv:-ki' # ;
 
 
 

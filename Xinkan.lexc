@@ -35,7 +35,8 @@ Multichar_Symbols
 a- a(ay)-
 
 !Aspect for verbs
-.comp .incomp .vn
+.comp .incomp .vn -imp.iv
+-y'a 
 
 !IVClassmarkers
 -act -aff
@@ -111,6 +112,7 @@ xuka Aspect ;
 
 LEXICON Aspect
 @U.Pref.NO@@U.NOM.NO@@U.TV.YES@.comp:@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ SetA ; !TV completive
+@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ TVImperative ; !TV imperative
 @U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
 @U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
@@ -340,7 +342,10 @@ LEXICON IVclassmarker
 @U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
 
 LEXICON IVImperative
-@U.Pref.NO@-imp:@U.Pref.NO@-y'a # ;
+@U.Pref.NO@-imp.iv:@U.Pref.NO@-y'a # ;
+
+LEXICON TVImperative
+-imp.tv:-ki' # ;
 
 
 

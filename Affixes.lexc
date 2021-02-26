@@ -18,8 +18,8 @@ LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incomp
 @U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
 
 LEXICON SetBFunction
-@U.NOM.NO@.subj-:@U.NOM.NO@ TVstems ; ! TV incompletive
-@U.NOM.YES@.poss-:@U.NOM.YES@0 TVstems ; !TV Verbal nouns
+@U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
+@U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@0 TVstems ; !TV Verbal nouns
 @U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
 @U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
 @U.NOM.YES@.poss-:@U.NOM.YES@0 VariableNstems ; ! Variable nouns
@@ -52,8 +52,8 @@ LEXICON SetE !Possession for inalienable nouns
 !Noun specific affixes
 
 LEXICON Diminutive
-@U.ALIEN.YES@dim-:@U.ALIEN.YES@chu- Alienable ;
-@U.ALIEN.NO@dim-:@U.ALIEN.NO@chu- Inalienable ;
+@U.DIM.YES@@U.ALIEN.YES@dim-:@U.DIM.YES@@U.ALIEN.YES@chu- Alienable ;
+@U.DIM.YES@@U.ALIEN.NO@dim-:@U.DIM.YES@@U.ALIEN.NO@chu- Inalienable ;
 
 LEXICON Number
 .sg:0 SetE ;

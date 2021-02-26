@@ -52,6 +52,8 @@ a- a(ay)-
 !Flags for Nouns
 @U.ALIEN.YES@
 @U.ALIEN.NO@
+@U.DIM.YES@
+@U.DIM.NO@
 
 !SetE = similar to Set A except 3sg and 3pl forms
 -1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss

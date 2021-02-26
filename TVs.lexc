@@ -1,7 +1,7 @@
 ! The complete template for TV verbs. There are 3 inflectional stems (3 paradigms)
 ! Bare = VN, ICOMP, COMP
 ! Inflected = SETB-VN, COMP-SETA, SETB-INCOMP
-! Contrastive focus -lhan
+! Contrastive focus is overgenerating three time. Not sure why. 
 
 LEXICON Transitive
 @U.TV.YES@  SetB ;
@@ -11,11 +11,12 @@ LEXICON TVstems
 xuka Aspect ;
 
 LEXICON Aspect
-@U.Pref.NO@@U.NOM.NO@@U.TV.YES@.comp:@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ SetA ; !TV completive
-@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ TVImperative ; !TV imperative
-@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
-@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
-@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
-@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
-@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
-@U.NOM.YES@.vn:%{NC%}@U.NOM.YES@ # ;
+@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@.comp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ SetA ; !TV completive
+@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ TVImperative ; !TV imperative
+@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
+@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.compQ:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
+@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incompR:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
+@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
+@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
+@U.DIM.NO@@U.NOM.YES@.vn:@U.DIM.NO@@U.NOM.YES@%{NC%} # ;
+!@U.DIM.NO@@U.NOM.NO@@U.COMP.NO@@U.TV.YES@-contr:@U.DIM.NO@@U.NOM.NO@@U.COMP.NO@@U.TV.YES@-lhan' # ;

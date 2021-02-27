@@ -1,7 +1,7 @@
 !Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
 
 LEXICON Variable
-    SetB ;
+@U.TV.NO@V SetB ;
     VariableNstems ;
 
 LEXICON VariableNstems 

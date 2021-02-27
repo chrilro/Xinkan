@@ -1,7 +1,7 @@
 !Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
 
 LEXICON Alienable
-    SetB ;
+@U.TV.NO@@U.VERB.NO@Q SetB ;
     ANsubclasses ;
 
 LEXICON ANsubclasses

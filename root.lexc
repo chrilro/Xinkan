@@ -14,6 +14,8 @@ Multichar_Symbols
 @U.ActIV.NO@
 @U.Pref.YES@
 @U.Pref.NO@
+@U.VERB.YES@
+@U.VERB.NO@
 
 !=Agreement for verbs=!
 !SETA
@@ -54,6 +56,8 @@ a- a(ay)-
 @U.ALIEN.NO@
 @U.DIM.YES@
 @U.DIM.NO@
+@U.VAR.YES@
+@U.VAR.NO@
 
 !SetE = similar to Set A except 3sg and 3pl forms
 -1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
@@ -82,8 +86,8 @@ m'
 y'
 
 LEXICON Root
-    Nouns ;
-    Verbs ;
+@U.VERB.NO@   Nouns ;
+@U.VERB.YES@ Verbs ;
     @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
     @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
     Pronominals ; ! Found in Seperate lexc files
@@ -95,8 +99,8 @@ LEXICON Verbs ! Found in Seperate lexc files
 
 LEXICON Nouns ! Found in Seperate lexc files
     Diminutive ;
-@U.ALIEN.YES@ Alienable ;
-@U.ALIEN.NO@ Inalienable ;
-    Variable ;
+@U.VAR.NO@@U.ALIEN.YES@ Alienable ;
+@U.VAR.NO@@U.ALIEN.NO@ Inalienable ;
+@U.VAR.YES@    Variable ;
 
 ! Affixes found in a seperate lexc file

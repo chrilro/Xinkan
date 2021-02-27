@@ -20,9 +20,9 @@ LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incomp
 LEXICON SetBFunction
 @U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
 @U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@0 TVstems ; !TV Verbal nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 VariableNstems ; ! Variable nouns
+@U.NOM.YES@@U.VERB.YES@.poss-:@U.NOM.YES@@U.VERB.YES@0 IVclass ; ! IV Verbal nouns
+@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@.poss-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@ ANsubclasses ; ! Alienable nouns
+@U.NOM.YES@@U.VAR.YES@.poss-:@U.NOM.YES@@U.VAR.YES@ VariableNstems ; ! Variable nouns
 
 LEXICON SetC !IV completive aspect
 @U.Pref.YES@@U.NOM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
@@ -69,6 +69,3 @@ LEXICON IVImperative
 
 LEXICON TVImperative
 -imp.tv:-ki' # ;
-
-
-

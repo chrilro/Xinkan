@@ -14,6 +14,8 @@ Multichar_Symbols
 @U.ActIV.NO@
 @U.Pref.YES@
 @U.Pref.NO@
+@U.VERB.YES@
+@U.VERB.NO@
 
 !=Agreement for verbs=!
 !SETA
@@ -54,6 +56,8 @@ a- a(ay)-
 @U.ALIEN.NO@
 @U.DIM.YES@
 @U.DIM.NO@
+@U.VAR.YES@
+@U.VAR.NO@
 
 !SetE = similar to Set A except 3sg and 3pl forms
 -1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
@@ -82,8 +86,8 @@ m'
 y'
 
 LEXICON Root
-    Nouns ;
-    Verbs ;
+@U.VERB.NO@   Nouns ;
+@U.VERB.YES@ Verbs ;
     @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
     @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
     Pronominals ; ! Found in Seperate lexc files
@@ -95,14 +99,15 @@ LEXICON Verbs ! Found in Seperate lexc files
 
 LEXICON Nouns ! Found in Seperate lexc files
     Diminutive ;
-@U.ALIEN.YES@ Alienable ;
-@U.ALIEN.NO@ Inalienable ;
-    Variable ;
+@U.VAR.NO@@U.ALIEN.YES@ Alienable ;
+@U.VAR.NO@@U.ALIEN.NO@ Inalienable ;
+@U.VAR.YES@    Variable ;
 
 ! Affixes found in a seperate lexc file
 ! The complete template for TV verbs. There are 3 inflectional stems (3 paradigms)
 ! Bare = VN, ICOMP, COMP
 ! Inflected = SETB-VN, COMP-SETA, SETB-INCOMP
+! Overgenerating
 
 LEXICON Transitive
 @U.TV.YES@  SetB ;
@@ -115,14 +120,16 @@ LEXICON Aspect
 @U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@.comp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ SetA ; !TV completive
 @U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.YES@ TVImperative ; !TV imperative
 @U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@.comp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.YES@@U.COMP.YES@ IVclassmarker ; ! ActIV completive
-@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.compQ:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
-@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incompR:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
+@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
+@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
 @U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
 @U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
 @U.DIM.NO@@U.NOM.YES@.vn:@U.DIM.NO@@U.NOM.YES@%{NC%} # ;
-@U.DIM.NO@@U.NOM.NO@@U.COMP.NO@@U.TV.YES@-contr:@U.DIM.NO@@U.NOM.NO@@U.COMP.NO@@U.TV.YES@-lhan' # ;
+@U.DIM.NO@@U.NOM.NO@@U.TV.YES@-contr:@U.DIM.NO@@U.NOM.NO@@U.TV.YES@-lhan' # ;
+
+
 LEXICON Intransitive
-@U.NOM.YES@ SetB ;
+@U.NOM.YES@@U.TV.NO@ SetB ;
 @U.COMP.YES@ SetC ;
 @U.COMP.NO@ SetD ;
  IVclass ;
@@ -139,7 +146,7 @@ yana Aspect ;
 !Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
 
 LEXICON Alienable
-    SetB ;
+@U.TV.NO@@U.VERB.NO@Q SetB ;
     ANsubclasses ;
 
 LEXICON ANsubclasses
@@ -171,7 +178,7 @@ Sipani # ;
 !Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
 
 LEXICON Variable
-    SetB ;
+@U.TV.NO@V SetB ;
     VariableNstems ;
 
 LEXICON VariableNstems 
@@ -299,9 +306,9 @@ LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incomp
 LEXICON SetBFunction
 @U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
 @U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@0 TVstems ; !TV Verbal nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 IVclass ; ! IV Verbal nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 ANsubclasses ; ! Alienable nouns
-@U.NOM.YES@.poss-:@U.NOM.YES@0 VariableNstems ; ! Variable nouns
+@U.NOM.YES@@U.VERB.YES@.poss-:@U.NOM.YES@@U.VERB.YES@0 IVclass ; ! IV Verbal nouns
+@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@.poss-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@ ANsubclasses ; ! Alienable nouns
+@U.NOM.YES@@U.VAR.YES@.poss-:@U.NOM.YES@@U.VAR.YES@ VariableNstems ; ! Variable nouns
 
 LEXICON SetC !IV completive aspect
 @U.Pref.YES@@U.NOM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
@@ -348,6 +355,3 @@ LEXICON IVImperative
 
 LEXICON TVImperative
 -imp.tv:-ki' # ;
-
-
-

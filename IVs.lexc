@@ -1,5 +1,6 @@
+
 LEXICON Intransitive
-@U.NOM.YES@ SetB ;
+@U.NOM.YES@@U.TV.NO@ SetB ;
 @U.COMP.YES@ SetC ;
 @U.COMP.NO@ SetD ;
  IVclass ;

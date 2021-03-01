@@ -6,12 +6,15 @@ LEXICON Adjectives
     Quantifiers ;
 
 LEXICON Adjectivestems
-ts'ama SetE ;
-ɨran SetE ;
-hawa SetE ;
-pari SetE ;
-mɨr'a SetE ;
-pɨts'a SetE ;
+ts'ama AdjEndings ;
+ɨran AdjEndings ;
+hawa AdjEndings ;
+pari AdjEndings ;
+mɨr'a AdjEndings ;
+pɨts'a AdjEndings ;
+
+LEXICON AdjEndings
+    SetE ;
 
 LEXICON Quantifiers
     Numerals ;

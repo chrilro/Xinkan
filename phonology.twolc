@@ -83,6 +83,6 @@ Vx:Vy <=> (C) _ C V %{AFF%}: ;
  ! The {NC}:0 correspondence is only possible after :G V _
 
 "Plural Suffix harmony"
-%{F%}:e <=> M %-lh _ ;
-            M C %-lh _ ;
+%{F%}:e <=> M %-(C) (C) _ ;
+            M C %-(C) (C) _ ;
 

@@ -16,6 +16,8 @@ Multichar_Symbols
 @U.Pref.NO@
 @U.VERB.YES@
 @U.VERB.NO@
+@U.DERIV.YES@
+@U.DERIV.NO@
 
 !=Agreement for verbs=!
 !SETA

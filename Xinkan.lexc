@@ -16,6 +16,8 @@ Multichar_Symbols
 @U.Pref.NO@
 @U.VERB.YES@
 @U.VERB.NO@
+@U.DERIV.YES@
+@U.DERIV.NO@
 
 !=Agreement for verbs=!
 !SETA
@@ -146,7 +148,7 @@ yana Aspect ;
 !Complete Template for Alienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
 
 LEXICON Alienable
-@U.TV.NO@@U.VERB.NO@Q SetB ;
+@U.TV.NO@@U.VERB.NO@ SetB ;
     ANsubclasses ;
 
 LEXICON ANsubclasses
@@ -154,10 +156,14 @@ LEXICON ANsubclasses
     Mass ;
 
 LEXICON Count
-huurak Number ;
+huurak Endings ;
 
 LEXICON Mass
-uy Number ;
+uy Endings ;
+
+LEXICON Endings
+@U.DERIV.NO@ Number ;
+@U.DERIV.YES@@U.DIM.NO@ IntransitiveDERIV ;
 !Complete Template for Inalienable Nouns. There are 2 sizes, 2 numbers, and optional possession (2) = 8 forms total
 
 LEXICON Inalienable
@@ -171,9 +177,6 @@ LEXICON Proper
 Hwan # ;
 Tuuru' # ;
 Sipani # ;
-
-
-
 
 !Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
 
@@ -190,12 +193,15 @@ LEXICON Adjectives
     Quantifiers ;
 
 LEXICON Adjectivestems
-ts'ama SetE ;
-ɨran SetE ;
-hawa SetE ;
-pari SetE ;
-mɨr'a SetE ;
-pɨts'a SetE ;
+ts'ama AdjEndings ;
+ɨran AdjEndings ;
+hawa AdjEndings ;
+pari AdjEndings ;
+mɨr'a AdjEndings ;
+pɨts'a AdjEndings ;
+
+LEXICON AdjEndings
+    SetE ;
 
 LEXICON Quantifiers
     Numerals ;
@@ -307,8 +313,9 @@ LEXICON SetBFunction
 @U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
 @U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@0 TVstems ; !TV Verbal nouns
 @U.NOM.YES@@U.VERB.YES@.poss-:@U.NOM.YES@@U.VERB.YES@0 IVclass ; ! IV Verbal nouns
-@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@.poss-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@ ANsubclasses ; ! Alienable nouns
+@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.NO@.poss-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.NO@ ANsubclasses ; ! Alienable nouns
 @U.NOM.YES@@U.VAR.YES@.poss-:@U.NOM.YES@@U.VAR.YES@ VariableNstems ; ! Variable nouns
+@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@.subj-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@ ANsubclasses ; ! Alienable nouns
 
 LEXICON SetC !IV completive aspect
 @U.Pref.YES@@U.NOM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
@@ -355,3 +362,6 @@ LEXICON IVImperative
 
 LEXICON TVImperative
 -imp.tv:-ki' # ;
+
+LEXICON IntransitiveDERIV
+-inch:-k'%{F%} # ;

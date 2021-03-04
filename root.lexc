@@ -90,8 +90,8 @@ y'
 LEXICON Root
 @U.VERB.NO@   Nouns ;
 @U.VERB.YES@ Verbs ;
-    @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
-    @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
+@U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
+@U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
     Pronominals ; ! Found in Seperate lexc files
     Particles ; ! Found in Seperate lexc files
 

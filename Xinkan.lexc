@@ -65,6 +65,9 @@ a- a(ay)-
 -1sg.poss -2sg.poss -3sg.poss -1pl.poss -2pl.poss -2pl.poss
 -h -h% lhik
 
+!Number
+%{F%}
+
 !==============!
 !==ADJECTIVES==!
 !==============!
@@ -157,6 +160,7 @@ LEXICON ANsubclasses
 
 LEXICON Count
 huurak Endings ;
+ts'oko Endings ;
 
 LEXICON Mass
 uy Endings ;

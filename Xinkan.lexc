@@ -90,8 +90,8 @@ y'
 LEXICON Root
 @U.VERB.NO@   Nouns ;
 @U.VERB.YES@ Verbs ;
-    @U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
-    @U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
+@U.ALIEN.NO@ Adpositions ; ! Found in Seperate lexc files
+@U.ALIEN.NO@@U.ADJ.YES@ Adjectives ; ! Found in Seperate lexc files
     Pronominals ; ! Found in Seperate lexc files
     Particles ; ! Found in Seperate lexc files
 
@@ -181,7 +181,7 @@ Sipani # ;
 !Complete Template for Variable Nouns. There are 2 sizes, 2 numbers, and 2 forms of optional possession = 12 forms total
 
 LEXICON Variable
-@U.TV.NO@V SetB ;
+@U.TV.NO@ SetB ;
     VariableNstems ;
 
 LEXICON VariableNstems 

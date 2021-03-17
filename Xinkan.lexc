@@ -18,6 +18,8 @@ Multichar_Symbols
 @U.VERB.NO@
 @U.DERIV.YES@
 @U.DERIV.NO@
+@U.CIRCUM.YES@
+@U.CIRCUM.NO@
 
 !=Agreement for verbs=!
 !SETA
@@ -128,7 +130,7 @@ LEXICON Aspect
 @U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
 @U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
 @U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
-@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
+@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} Personcircumfixes ; !ActIV and TV incompletive
 @U.DIM.NO@@U.NOM.YES@.vn:@U.DIM.NO@@U.NOM.YES@%{NC%} # ;
 @U.DIM.NO@@U.NOM.NO@@U.TV.YES@-contr:@U.DIM.NO@@U.NOM.NO@@U.TV.YES@-lhan' # ;
 
@@ -322,20 +324,20 @@ LEXICON SetBFunction
 @U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@.subj-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@ ANsubclasses ; ! Alienable nouns
 
 LEXICON SetC !IV completive aspect
-@U.Pref.YES@@U.NOM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
-@U.Pref.YES@@U.NOM.NO@2sg.comp-:@U.Pref.YES@@U.NOM.NO@ka- IVclass ;
-@U.Pref.YES@@U.NOM.NO@3sg.comp-:@U.Pref.YES@@U.NOM.NO@%0- IVclass ;
-@U.Pref.YES@@U.NOM.NO@1pl.comp-:@U.Pref.YES@@U.NOM.NO@muk- IVclass ;
-@U.Pref.YES@@U.NOM.NO@2pl.comp-:@U.Pref.YES@@U.NOM.NO@ka(ay) IVclass ;
-@U.Pref.YES@@U.NOM.NO@3pl.comp-:@U.Pref.YES@@U.NOM.NO@%0(ay)- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@1sg.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@ɨn- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@2sg.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@3sg.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@%0- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@1pl.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@muk- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@2pl.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@3pl.comp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@%0- IVclass ;
 
 LEXICON SetD !IV incompletive aspect
-@U.Pref.YES@@U.NOM.NO@1sg.incomp-:@U.Pref.YES@@U.NOM.NO@ɨn- IVclass ;
-@U.Pref.YES@@U.NOM.NO@2sg.incomp-:@U.Pref.YES@@U.NOM.NO@ka- IVclass ;
-@U.Pref.YES@@U.NOM.NO@3sg.incomp-:@U.Pref.YES@@U.NOM.NO@a- IVclass ;
-@U.Pref.YES@@U.NOM.NO@1pl.incomp-:@U.Pref.YES@@U.NOM.NO@muk- IVclass ;
-@U.Pref.YES@@U.NOM.NO@2pl.incomp-:@U.Pref.YES@@U.NOM.NO@ka(ay) IVclass ;
-@U.Pref.YES@@U.NOM.NO@3pl.incomp-:@U.Pref.YES@@U.NOM.NO@a(ay)- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@1sg.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@ɨn- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@2sg.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@3sg.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@a- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@1pl.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.NO@muk- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@2pl.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@ka- IVclass ;
+@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@3pl.incomp-:@U.Pref.YES@@U.NOM.NO@@U.CIRCUM.YES@a- IVclass ;
 
 LEXICON SetE !Possession for inalienable nouns
 @U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-1sg.poss:@U.ADJ.NO@@U.Pref.NO@@U.ALIEN.NO@-n' # ;
@@ -358,8 +360,12 @@ LEXICON Number
 
 !IV specfic affixes
 LEXICON IVclassmarker
-@U.ActIV.YES@-act:@U.ActIV.YES@-lha' # ;
-@U.ActIV.NO@-aff:@U.ActIV.NO@-' # ;
+@U.ActIV.YES@-act:@U.ActIV.YES@-lha' Personcircumfixes ;
+@U.ActIV.NO@-aff:@U.ActIV.NO@-' Personcircumfixes ;
+
+LEXICON Personcircumfixes
+@U.CIRCUM.YES@:% ay # ;
+@U.CIRCUM.NO@ # ;
 
 LEXICON IVImperative
 @U.Pref.NO@-imp.iv:@U.Pref.NO@-y'a # ;

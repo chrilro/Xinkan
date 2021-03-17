@@ -17,7 +17,7 @@ LEXICON Aspect
 @U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@.comp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.YES@%{AFF%} IVclassmarker ; ! AffIV completive
 @U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.TV.NO@@U.ActIV.NO@@U.COMP.NO@ IVclassmarker; ! AffIV incompletive
 @U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@.incomp:@U.DIM.NO@@U.Pref.NO@@U.NOM.NO@@U.TV.NO@@U.COMP.NO@ IVImperative; ! AffIV incompletive
-@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} # ; !ActIV and TV incompletive
+@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@.incomp:@U.DIM.NO@@U.NOM.NO@@U.ActIV.YES@@U.COMP.NO@%{NC%} Personcircumfixes ; !ActIV and TV incompletive
 @U.DIM.NO@@U.NOM.YES@.vn:@U.DIM.NO@@U.NOM.YES@%{NC%} # ;
 @U.DIM.NO@@U.NOM.NO@@U.TV.YES@-contr:@U.DIM.NO@@U.NOM.NO@@U.TV.YES@-lhan' # ;
 

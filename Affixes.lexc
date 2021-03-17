@@ -10,12 +10,12 @@ LEXICON SetA
 # ;
 
 LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incompletive
-@U.Pref.YES@1sg:@U.Pref.YES@ɨn- SetBFunction ;
-@U.Pref.YES@2sg:@U.Pref.YES@ka'- SetBFunction ;
-@U.Pref.YES@3sg:@U.Pref.YES@mu- SetBFunction ;
-@U.Pref.YES@1pl:@U.Pref.YES@muk- SetBFunction ;
-@U.Pref.YES@2pl:@U.Pref.YES@ka(ay)- SetBFunction ;
-@U.Pref.YES@3pl:@U.Pref.YES@mu(ay)- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.NO@1sg:@U.Pref.YES@@U.CIRCUM.NO@ɨn- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.NO@2sg:@U.Pref.YES@@U.CIRCUM.NO@ka'- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.NO@3sg:@U.Pref.YES@@U.CIRCUM.NO@mu- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.NO@1pl:@U.Pref.YES@@U.CIRCUM.NO@muk- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.YES@2pl:@U.Pref.YES@@U.CIRCUM.YES@ka(ay)- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.YES@3pl:@U.Pref.YES@@U.CIRCUM.YES@mu(ay)- SetBFunction ;
 
 LEXICON SetBFunction
 @U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
@@ -65,15 +65,15 @@ LEXICON IVclassmarker
 @U.ActIV.YES@-act:@U.ActIV.YES@-lha' Personcircumfixes ;
 @U.ActIV.NO@-aff:@U.ActIV.NO@-' Personcircumfixes ;
 
+LEXICON IVImperative
+@U.Pref.NO@-imp.iv:@U.Pref.NO@-y'a Personcircumfixes ;
+
+LEXICON TVImperative
+-imp.tv:-ki' Personcircumfixes ;
+
+LEXICON IntransitiveDERIV
+-inch:-k'%{F%} Personcircumfixes ;
+
 LEXICON Personcircumfixes
 @U.CIRCUM.YES@:% ay # ;
 @U.CIRCUM.NO@ # ;
-
-LEXICON IVImperative
-@U.Pref.NO@-imp.iv:@U.Pref.NO@-y'a # ;
-
-LEXICON TVImperative
--imp.tv:-ki' # ;
-
-LEXICON IntransitiveDERIV
--inch:-k'%{F%} # ;

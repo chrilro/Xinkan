@@ -78,7 +78,7 @@ Vx:Vy <=> (C) _ C V %{AFF%}: ;
  %{AFF%}:0 <=> V _  ;
 
   "Incompletive Tag removal"
- %{NC%}:0 <=> :G V _ # ;
+ %{NC%}:0 <=> :G V _ (# | ay) ;
  ! This rule says delete NC after a lower side G followed by a vowel and a word boundary. 
  ! The {NC}:0 correspondence is only possible after :G V _
 

@@ -28,7 +28,7 @@ Multichar_Symbols
 
 !SETB for nouns and verbs
 1sg 2sg 3sg 1pl 2pl 3pl
-ɨn- ka'- mu- muk- ka(ay)- mu(ay)-
+ɨn- ka- mu- muk- ay
 
 !SetB Functions
 .subj .poss
@@ -36,9 +36,9 @@ Multichar_Symbols
 !SetC and D
 1sg- 2sg- 3sg- 1pl- 2pl- 3pl-
 !SetC (all of SetB except for 3sg and 3pl forms)
-%0- %0(ay)-
+%0-
 !SetD (add of SetB except for 3sg and 3pl forms)
-a- a(ay)-
+a-
 
 !Aspect for verbs
 .comp .incomp .vn -imp.iv

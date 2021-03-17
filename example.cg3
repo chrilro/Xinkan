@@ -1,0 +1,17 @@
+([Location][Modifiers] [Pattern])
+
+LIST VERB = X Y ;
+
+
+!Disallow verbs after determiners
+!remove V IF (-1C DET) 
+
+!The problem is that it is treating syntax as only linear
+!Also the relational vs. non-relation information is not being encoded
+!So while != generative is good, but what we get is less robust. 
+
+!Consequently we can boil this down to 
+!AAV, AVA, or VAA
+!A can only select referent contents
+!V can only select non-referent contents
+!Xinkan is V-A (A) or V-A (A) {A}

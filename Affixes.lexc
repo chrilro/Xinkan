@@ -74,6 +74,7 @@ LEXICON TVImperative
 LEXICON IntransitiveDERIV
 -inch:-k'%{F%} Personcircumfixes ;
 
+!Circumfix elements for pronominal plural prefixes
 LEXICON Personcircumfixes
 @U.CIRCUM.YES@:@U.CIRCUM.YES@% ay # ;
 @U.CIRCUM.NO@ # ;

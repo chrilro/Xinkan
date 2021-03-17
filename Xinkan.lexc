@@ -312,13 +312,13 @@ LEXICON SetB ! possession for all verbal nouns and alienable nouns and tv incomp
 @U.Pref.YES@@U.CIRCUM.NO@2sg:@U.Pref.YES@@U.CIRCUM.NO@ka'- SetBFunction ;
 @U.Pref.YES@@U.CIRCUM.NO@3sg:@U.Pref.YES@@U.CIRCUM.NO@mu- SetBFunction ;
 @U.Pref.YES@@U.CIRCUM.NO@1pl:@U.Pref.YES@@U.CIRCUM.NO@muk- SetBFunction ;
-@U.Pref.YES@@U.CIRCUM.YES@2pl:@U.Pref.YES@@U.CIRCUM.YES@ka(ay)- SetBFunction ;
-@U.Pref.YES@@U.CIRCUM.YES@3pl:@U.Pref.YES@@U.CIRCUM.YES@mu(ay)- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.YES@2pl:@U.Pref.YES@@U.CIRCUM.YES@ka- SetBFunction ;
+@U.Pref.YES@@U.CIRCUM.YES@3pl:@U.Pref.YES@@U.CIRCUM.YES@mu- SetBFunction ;
 
 LEXICON SetBFunction
 @U.TV.YES@@U.NOM.NO@.subj-:@U.TV.YES@@U.NOM.NO@ TVstems ; ! TV incompletive and contrastive
-@U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@0 TVstems ; !TV Verbal nouns
-@U.NOM.YES@@U.VERB.YES@.poss-:@U.NOM.YES@@U.VERB.YES@0 IVclass ; ! IV Verbal nouns
+@U.TV.YES@@U.NOM.YES@.poss-:@U.TV.YES@@U.NOM.YES@ TVstems ; !TV Verbal nouns
+@U.NOM.YES@@U.VERB.YES@.poss-:@U.NOM.YES@@U.VERB.YES@ IVclass ; ! IV Verbal nouns
 @U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.NO@.poss-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.NO@ ANsubclasses ; ! Alienable nouns
 @U.NOM.YES@@U.VAR.YES@.poss-:@U.NOM.YES@@U.VAR.YES@ VariableNstems ; ! Variable nouns
 @U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@.subj-:@U.NOM.YES@@U.VERB.NO@@U.VAR.NO@@U.DERIV.YES@ ANsubclasses ; ! Alienable nouns
@@ -373,5 +373,5 @@ LEXICON IntransitiveDERIV
 -inch:-k'%{F%} Personcircumfixes ;
 
 LEXICON Personcircumfixes
-@U.CIRCUM.YES@:% ay # ;
+@U.CIRCUM.YES@:@U.CIRCUM.YES@% ay # ;
 @U.CIRCUM.NO@ # ;

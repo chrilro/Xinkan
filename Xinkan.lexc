@@ -163,9 +163,15 @@ LEXICON ANsubclasses
 LEXICON Count
 huurak Endings ;
 ts'oko Endings ;
+miya Endings ;
+peelo' Endings ;
+xuxi Endings ;
+kɨɨʃa Endings ;
 
 LEXICON Mass
 uy Endings ;
+wati Endings ;
+ɬɨwɨ Endings ;
 
 LEXICON Endings
 @U.DERIV.NO@ Number ;
@@ -178,6 +184,12 @@ LEXICON Inalienable
 
 LEXICON IANstems 
 nuuru Number ;
+paama Number ;
+uʃti Number ;
+nawak'u Number ;
+lak'uwa Number ;
+ay'a Number ;
+naru Number ;
 
 LEXICON Proper
 Hwan # ;
@@ -205,6 +217,9 @@ hawa AdjEndings ;
 pari AdjEndings ;
 mɨr'a AdjEndings ;
 pɨts'a AdjEndings ;
+iipan AdjEndings ;
+haya AdjEndings ;
+chɨrɨkɨ AdjEndings ;
 
 LEXICON AdjEndings
     SetE ;

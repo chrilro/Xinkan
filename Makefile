@@ -14,8 +14,8 @@ all : Xinkan.lexc \
 	Xinkan_ana.hfst \
 	Xinkan_gen.hfstol \
 	Xinkan_ana.hfstol \
-	Xinkan_lexicon.png
-	#ana.png 
+	Xinkan_lexicon.png \
+	Xinkan_ana.png 
 
 Xinkan.lexc : root.lexc TVs.lexc IVs.lexc AlienN.lexc InalienN.lexc VariableN.lexc Adjectives.lexc Adpositions.lexc Particles.lexc Pronominals.lexc Affixes.lexc
 	cat root.lexc TVs.lexc IVs.lexc AlienN.lexc InalienN.lexc VariableN.lexc Adjectives.lexc Adpositions.lexc Particles.lexc Pronominals.lexc Affixes.lexc > Xinkan.lexc
@@ -38,8 +38,8 @@ Xinkan_ana.hfst : Xinkan_complete.hfst
 Xinkan_ana.hfstol : Xinkan_ana.hfst
 	hfst-fst2fst --optimized-lookup-unweighted -i Xinkan_ana.hfst -o Xinkan_ana.hfstol
 
-#ana.png : ana.hfstol
-#	hfst-fst2txt ana.hfstol | python3 att2dot.py | dot -T png -o ana.png
+Xinkan_ana.png : Xinkan_ana.hfstol
+	hfst-fst2txt Xinkan_ana.hfstol | python3 att2dot.py | dot -T png -o Xinkan_ana.png
 
 Xinkan_lexicon.png : Xinkan.lexc
 	python3 lexc2dot.py < Xinkan.lexc | dot -T png -o Xinkan_lexicon.png
